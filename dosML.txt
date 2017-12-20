@@ -1,0 +1,64 @@
+dos命令：
+返回上一级 cd..
+返回根目录 cd\
+新建文件夹 md test
+新建文件 echo 1234>A.txt（新建一个文件，并将1234作为内容写入） 
+打开文件 start index.js（打开文件的应用是你设置的默认应用）
+查看path环境变量 path
+
+webpack命令
+npm初始化 npm init -y （-y可以生成一个package.json的配置文件，可以看一下nodejs或者npm的教程）
+
+webpack安装 npm install webpack --save-dev
+（这里需要在管理员模式中运行，如果是苹果电脑需要加上sudo即：sudo npm install webpack --save-dev，--save-dev是把一些依赖文件保存到配置文件中package.json会有所变化
+//全局安装
+npm install -g webpack
+//安装到你的项目目录
+npm install --save-dev webpack
+）
+
+打包文件：node_modules\.bin\webpack app\index.js build\index.js
+(新建一个app文件夹，里边新建一个index.js文件，然后执行上面的语句，就会在项目中建立一个build文件夹，里面有一个index.js文件，会把app\index.js中的内容打包到build\index.js文件中)
+
+安装webpack插件 npm install html-webpack-plugin --save-dev （这个语句也需要在管理员模式下运行，苹果电脑要sudo）
+
+（*webpack.config.js文件是webpack的一些配置内容，必须要有，自己新建）
+
+打包文件：node_modules\.bin\webpack
+
+nodejs命令
+nodejs的版本号为偶数就是稳定版如：-0.6.x -1.2.x 奇数为非稳定版如：-1.3.x
+
+
+
+git gui中文乱码：
+在我们操作系统的宿主目录（我的电脑是 C:\Users\Liwei）下有一个 .gitconfig 文件，在这个文件的最后添加
+[gui]
+    encoding = utf-8
+
+为什么要先 git add 才能 git commit ？
+关键点是git有一个缓冲区，
+https://www.zhihu.com/question/19946553
+
+出现以下报错：
+Please make sure you have the correct access rights and the repository exists.
+原因是没有在github账号添加SSH key，可以参考：
+http://blog.csdn.net/u014343528/article/details/48787221 或者
+在git gui中help ->  Show SSH Key获取SSH 然后添加到github.com
+
+添加远程库：
+git remote add origin git@github.com:Aruix/demo.git
+当我们添加的时候可能会出现报错：
+fatal: remote origin already exists.
+这时候我们要先删除远程库，再添加：
+git remote rm origin
+git remote add origin git@github.com:Aruix/demo.git
+
+上传整个项目：
+1、git add . 
+（这个语句的结尾要加一个空格，否则会报错 
+warning: LF will be replaced by CRLF in test.html.
+The file will have its original line endings in your working directory.）
+2、git commit -m "first Commit"
+3、git remote add origin git@git.oschina.net:tingkongwanli/git.git(如果已连接过，可以不写)
+4、git push -u origin master
