@@ -62,3 +62,43 @@ The file will have its original line endings in your working directory.）
 2、git commit -m "first Commit"
 3、git remote add origin git@git.oschina.net:tingkongwanli/git.git(如果已连接过，可以不写)
 4、git push -u origin master
+
+/***在家中新加的***/
+DOS命令
+进入其他的盘如F盘 直接输入 f:
+
+
+git使用：
+1、安装git https://git-scm.com/download/win 按默认选项安装即可
+(如果需要设置全局的用户名和邮箱，就在此设置 
+$ git config --global user.name "Your Name"    
+$ git config --global user.email "email@example.com"
+其中--global表示所有的git仓库都使用这个配置
+)
+
+2、新建一个文件夹(注意不要使用汉字路径)
+使用 git init命令新建一个仓库，
+如果没有全局设置用户名和邮箱，就在此设置，如下：
+git init
+git config user.name "Your Name"    
+git config user.email "email@example.com"
+当我们设置完成之后，磁盘路径后面就会有一个 (master)
+
+3、远程服务器信息有两种填写方式，填写https地址或ssh地址
+https地址如：https://github.com/Aruix/demo.git
+这种方式需要输入账户和密码，这意味着你只能操作自己的项目
+ssh地址如： git@github.com:Aruix/demo.git
+这种方式需要进行授权设置 在Git Gui的菜单栏，点击Help->Show SSH key->Generate SSH KEY创建密钥 然后在GitHub的设置中添加它，title随意（第一次使用gui时，可能会乱码，找到 .gitconfig文件，在下面加上：
+[gui]
+	encoding = utf-8
+也可以在id_ras.pub文件中查看SSH Key
+）
+
+
+4、克隆远程项目：
+git clone git@github.com:Aruix/demo.git
+可能会有如下提示：
+The authenticity of host 'github.com (192.30.255.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)
+直接输入yes即可。
