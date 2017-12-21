@@ -108,3 +108,23 @@ Are you sure you want to continue connecting (yes/no)
 git add 'readme.txt'
 git commit -m "wrote a readme file" //-m后面是此次提交的说明。
 
+/***使用GUI的方法****/
+使用Git GUI（参考 http://blog.csdn.net/qq_34842671/article/details/70916587）
+上传本地修改：
+1、先看一下 unstaged changes中有没有文件，这里面的文件是本地修改的
+2、如果这个区域没有文件，点击下面的rescan(扫描本地修改的文件)
+3、扫描完毕之后，点击stage changed按钮，将文件放入staged changes区
+4、输入描述之后，点击commit按钮，提交本地修改（提交之后，可以通过history查看版本修改）
+5、最后点击push按钮上传远程服务器
+(上传远程服务器，可能会出现如下错误
+git error: failed to push some refs to 'git@github.com:
+这是因为，远程的服务器更新过，所以需要先从远程服务器更新到本地，进行合并修改之后，才能进行新的上传
+运行如下代码：
+git pull --rebase origin master
+或者进行下面的“从服务器更新到本地”的步骤
+)
+
+从服务器更新到本地
+1、点击上面的 remote -> fetch from 
+2、与本地的文件合并 点击上面的Merge->Local Merge进行合并，选择Tracking Branch。
+
