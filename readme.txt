@@ -5,3 +5,5 @@ text buzhichihanyu
 再试试啊
 我卡考啊
 早一次
+
+使用GUI测试！
