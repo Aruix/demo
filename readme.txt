@@ -17,3 +17,20 @@ text buzhichihanyu
 
 这次提交啊！
 这次远
+
+安装的社区扩展
+active-power-mode
+
+atom-ternjs
+
+autoprefixer
+
+editor-background
+
+emmet
+
+git-plus
+
+open-in-browser
+
+simplified-chinese-menu
