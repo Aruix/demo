@@ -2,7 +2,7 @@ dos命令：
 返回上一级 cd..
 返回根目录 cd\
 新建文件夹 md test
-新建文件 echo 1234>A.txt（新建一个文件，并将1234作为内容写入） 
+新建文件 echo 1234>A.txt（新建一个文件，并将1234作为内容写入）
 打开文件 start index.js（打开文件的应用是你设置的默认应用）
 查看path环境变量 path
 
@@ -55,8 +55,8 @@ git remote rm origin
 git remote add origin git@github.com:Aruix/demo.git
 
 上传整个项目：
-1、git add . 
-（这个语句的结尾要加一个空格，否则会报错 
+1、git add .
+（这个语句的结尾要加一个空格，否则会报错
 warning: LF will be replaced by CRLF in test.html.
 The file will have its original line endings in your working directory.）
 2、git commit -m "first Commit"
@@ -70,8 +70,8 @@ DOS命令
 
 git使用：
 1、安装git https://git-scm.com/download/win 按默认选项安装即可
-(如果需要设置全局的用户名和邮箱，就在此设置 
-$ git config --global user.name "Your Name"    
+(如果需要设置全局的用户名和邮箱，就在此设置
+$ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 其中--global表示所有的git仓库都使用这个配置
 )
@@ -80,7 +80,7 @@ $ git config --global user.email "email@example.com"
 使用 git init命令新建一个仓库，
 如果没有全局设置用户名和邮箱，就在此设置，如下：
 git init
-git config user.name "Your Name"    
+git config user.name "Your Name"
 git config user.email "email@example.com"
 当我们设置完成之后，磁盘路径后面就会有一个 (master)
 
@@ -125,6 +125,12 @@ git pull --rebase origin master
 )
 
 从服务器更新到本地
-1、点击上面的 remote -> fetch from 
+1、点击上面的 remote -> fetch from
 2、与本地的文件合并 点击上面的Merge->Local Merge进行合并，选择Tracking Branch。
 
+克隆操作
+克隆的时候，如果我们想把文件克隆到C://demo/as文件夹，那么在demo文件夹中不要有as文件夹，克隆的时候回自动创建文件夹。
+
+新建仓库
+1、点击remote->add。添加远程的服务器
+2、通过 git config user.name ""和git config user.email ""添加有户名和邮箱(如果我们在安装git时，全局设置了用户名和密码，就不需要继续设置了)
