@@ -11,3 +11,4 @@ text buzhichihanyu
 
 这是测试atom的git功能！
 再次测试一下atom中的git！
+这是第三次测试了！看看吧！
