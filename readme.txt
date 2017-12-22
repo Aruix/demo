@@ -8,3 +8,5 @@ text buzhichihanyu
 
 使用GUI测试！
 这是为测试更新本地做的测试！
+
+这是测试atom的git功能！
