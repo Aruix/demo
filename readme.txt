@@ -10,5 +10,4 @@ text buzhichihanyu
 这是为测试更新本地做的测试！
 
 这是测试atom的git功能！
-
-测试用下吧 我卡卡
+再次测试一下atom中的git！
