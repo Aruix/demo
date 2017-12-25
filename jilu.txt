@@ -1,0 +1,157 @@
+/****这是以前的***/
+企业QQ风格
+http://b.qq.com/wp/
+
+网页(PC端)中通过链接打开QQ应用
+href： http://wpa.qq.com/msgrd?v=3&uin=1559471851&site=qq&menu=yes
+uin后添上自己的QQ号码
+
+阿里巴巴矢量图库
+http://www.iconfont.cn/
+
+内联css样式优先级大于伪类选择器
+如果<div class="div" style="color:red"></div>
+那么.div:hover{color:green}就没有效果了
+
+如果要设置元素的宽和高，那么元素的display属性，必须不是inline
+
+系统的字体设置 font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+
+设置文字被选中时的状态
+::selection 文字被选中时的状态
+::-moz-selection
+在有些浏览器需要设置display:block 此属性才起作用
+设置文字不能被选中：
+body{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+通过data- 和content:attr(),实现显示提示信息。
+*这里attr()可以添加任意的属性值，如href title等
+*content属性具体介绍，可以看这个链接 http://www.zhangxinxu.com/wordpress/2010/04/css-content%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E4%BB%A5%E5%8F%8A%E5%BA%94%E7%94%A8/
+代码如下：
+html：
+<div>
+	<span data-toolip="hello world">鼠标放上来试试!</span>
+</div>
+css:
+span{
+	position: relative;
+	display: inline-block;
+}
+span:hover{
+	cursor: pointer;
+}
+span:hover:before{
+	content: attr(data-toolip);
+	background:#d9444a;
+	color: #FFFFFF;
+	padding: .8em 1em;
+	position: absolute;
+	left: 100%;
+	top: -70%;
+	margin-left: 14px;
+	white-space: pre;
+}
+span:hover:after{
+	content: '';
+	position: absolute;
+	left: 108%;
+	width: 0;
+	height: 0;
+	border-right: 8px solid #d9444a;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+
+利用css禁止鼠标事件:
+pointer-events:auto/none;
+此属性设置auto时，表示没有设置此属性
+此属性设置none时，表示禁止了任何鼠标事件
+兼容性：Opera以及IE不支持
+
+white-space属性
+normal：
+    默认处理方式。
+pre：
+    用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字超出边界时不换行。可查阅pre对象
+nowrap：
+    强制在同一行内显示所有文本，合并文本间的多余空白，直到文本结束或者遭遇br对象。
+pre-wrap：
+    用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字碰到边界时发生换行。
+pre-line：
+    保持文本的换行，不保留文字间的空白距离，当文字碰到边界时发生换行。
+
+AI转曲：
+Ctrl+A全选之后，Ctrl+shift+O转曲
+
+javascript中this的概念：
+总的原则，那就是this指的是，调用函数的那个对象。
+1、纯碎的函数调用(this指代全局global)
+function test(){
+  this.x = 1;
+  alert(this.x)
+}
+test(); //1 this指代全局对象window
+2、作为对象的方法调用(this指代这个对象)
+var o = {
+  x:1,
+  y:2,
+  z:function(){
+    console.log(this.x);
+  }
+}
+o.z()//1 this指代 对象o
+3、作为构造函数来调用(指代这个新的对象)
+function test() {
+  this.x = 1;
+}
+var o = new test();
+alert(o.x);//1 this指代新的对象o
+4、apply调用(this指代第一个参数)
+x = '这是全局的'
+var o = {
+  x: 1,
+  m: function () {
+    console.log(this.x);
+  }
+}
+o.m();//1
+o.m.apply();//"这是全局的"(如果没有参数，就指代全局global)
+o.m.apply(o);//1 (把o作为参数，那么this指代o对象)
+
+
+1、prototype.bind的用法
+将this指代第一个参数
+var myObj = {
+  specialFunction: function () {
+	alert(123);
+  },
+  anotherSpecialFunction: function () {
+	alert(456);
+  },
+  getAsyncData: function (cb) {
+      cb();
+  },
+  render: function () {
+      var that = this;
+      this.getAsyncData(function () {
+          that.specialFunction();
+          that.anotherSpecialFunction();
+      });
+  }
+};
+myObj.render();
+将上面的render替换为下面的，结果是一样的！
+render: function () {
+    this.getAsyncData(function () {
+        this.specialFunction();
+        this.anotherSpecialFunction();
+    }.bind(this));
+}
+sieoalllaeixeyllxowoeiuuueo
+/****新建文件之后的***/
+作为一个程序员，我有一个执念，我知道，只要我键盘敲击的足够快，就可以逆转时空改变未来。当我敲下“hello world”的时候，新的时代已经来临，新的篇章已经开启！
