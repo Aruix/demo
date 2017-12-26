@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>测试用的</title>
+    <style type="text/css">
+      .fuji{
+        font-size: 8px;
+      }
+      .ziji{
+        font-size: 200%;
+        width: 6em;
+        height: 3em;
+      }
+    </style>
   </head>
   <body>
-    <script type="text/javascript">
-      x = '这是全局的'
-      var o = {
-        x: 1,
-        m: function () {
-          console.log(this.x);
-        }
-      }
-      o.m();//1
-      o.m.apply();//"这是全局的"
-      o.m.apply(o);//1
-    </script>
+      <div class="cla ziji" title="sss">click</div>
   </body>
 </html>

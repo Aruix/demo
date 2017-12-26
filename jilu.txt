@@ -88,6 +88,26 @@ pre-line：
 AI转曲：
 Ctrl+A全选之后，Ctrl+shift+O转曲
 
+css各个属性设置的百分数的参考
+相对于父元素宽度的：
+[max/min-]width、left、right、text-indent、padding、margin 等；
+相对于父元素高度的：
+[max/min-]height、top、bottom 等；
+相对于主轴长度的：
+flex-basis 等；
+相对于继承字号的：font-size 等；
+相对于自身字号的：line-height 等；
+相对于自身宽高的：
+border-radius、background-size、border-image-width、transform: translate()、transform-origin、zoom、clip-path 等；
+相对于行高的：
+vertical-align 等；
+特殊算法的：
+background-position （方向长度 / 该方向除背景图之外部分总长度 * 100）、border-image-slice （相对于图片尺寸）、filter 系列函数等；
+如果自身设置 position: absolute，
+“父元素”指：与其关系最近的设置定位的祖先元素
+如果 position: fixed，“父元素”指视口。
+
+
 javascript中this的概念：
 总的原则，那就是this指的是，调用函数的那个对象。
 1、纯碎的函数调用(this指代全局global)
@@ -155,3 +175,8 @@ render: function () {
 sieoalllaeixeyllxowoeiuuueo
 /****新建文件之后的***/
 作为一个程序员，我有一个执念，我知道，只要我键盘敲击的足够快，就可以逆转时空改变未来。当我敲下“hello world”的时候，新的时代已经来临，新的篇章已经开启！
+chrome浏览器font-size的最小值是12px,我们设置em或者百分数时，必须要注意
+em是相对于自身font-size的大小(自己设置或继承的)来设定的。
+
+四平日报社的项目，设计稿1920px，中心区域1400px，使用rem布局，但是ie8及以下版本不支持rem
+解决方法：width：10rem;width:100px;实现优雅降级。这里要注意rem单位要写在后面。
