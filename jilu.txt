@@ -180,3 +180,28 @@ em是相对于自身font-size的大小(自己设置或继承的)来设定的。
 
 四平日报社的项目，设计稿1920px，中心区域1400px，使用rem布局，但是ie8及以下版本不支持rem
 解决方法：width：10rem;width:100px;实现优雅降级。这里要注意rem单位要写在后面。
+
+jquery的ready方法是相对于document的，不管前面绑定的是哪个元素，如：
+$("#demo").ready(function(){
+  $(this).***//这里的$(this)指代的是document
+})
+
+详解：[if lte IE 9]……[endif]
+<!--[if !IE]><!--> 除IE外都可识别 <!--<![endif]-->
+<!--[if IE]> 所有的IE可识别 <![endif]-->
+<!--[if lt IE 5.5]> 小于5.5(不包括5.5) <![endif]-->
+<!--[if lte IE 6]> 小于6(包括6) <![endif]-->
+<!--[if gt IE 5]> 大于5(不包括5) <![endif]-->
+<!--[if gte IE 5]> 大于5(包括5) <![endif]-->
+其他的运算符：
+()、&、|、！
+例如：[if (gt IE 5)&(lt IE 7)]
+详细解释可参考链接： http://www.weste.net/2013/8-9/93104.html
+
+javascript中的width，height，offsetWidth等获取宽高的方法，如何获取position为absolute的元素的高度。
+
+元素设置position:absolute后，与margin left right top bottom width height的关系
+
+swiper2.0可以兼容到ie7 ，但是没有fade渐隐模式，onInit和onFirstInit在不同的浏览器中，触发的方式不同。
+oninit是非第一次初始化的时候触发，但是在Chrome中，第一次刷新页面也会触发，而在firefox中不会触发。
+而onFirstInit在Chrome第一次初始化的时候却不会触发。
