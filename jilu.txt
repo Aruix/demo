@@ -205,3 +205,16 @@ javascript中的width，height，offsetWidth等获取宽高的方法，如何获
 swiper2.0可以兼容到ie7 ，但是没有fade渐隐模式，onInit和onFirstInit在不同的浏览器中，触发的方式不同。
 oninit是非第一次初始化的时候触发，但是在Chrome中，第一次刷新页面也会触发，而在firefox中不会触发。
 而onFirstInit在Chrome第一次初始化的时候却不会触发。
+
+emmet代码缩写：
+^上级符号的使用,如：
+<div class="header-bottom">
+  <div class="logo-img"><img src="" alt=""></div>
+  <form action="" id="search">
+    <input type="text">
+    <input type="submit">
+  </form>
+  <div class="ad"><img src="" alt=""></div>
+</div>
+可以写作：
+div.header-bottom>div.logo-img>img^form>input[type=text]+input[type=submit]^div.ad>img
