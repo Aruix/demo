@@ -218,3 +218,11 @@ emmet代码缩写：
 </div>
 可以写作：
 div.header-bottom>div.logo-img>img^form>input[type=text]+input[type=submit]^div.ad>img
+
+jquery返回顶部：
+$("html").animate({scrollTop:0},500)
+这里不能使用$(document),document不能设置scrollTop属性
+但是页面的滚动事件scroll，不能绑定到$("html")上，需要绑定在$(document)上
+$(document).scroll(function(){
+  var x = $("html")[0].scrollTop;//滚动轴距顶部的距离
+})
