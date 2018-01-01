@@ -1,36 +1,6 @@
-text
-text buzhichihanyu
-加入 新的动车
-这是事实啊
-再试试啊
-我卡考啊
-早一次
-
-使用GUI测试！
-这是为测试更新本地做的测试！
-
-这是测试atom的git功能！
-再次测试一下atom中的git！
-这是第三次测试了！看看吧！
-
-第四次测试！
-
-这次提交啊！
-这次远
-
-安装的社区扩展
-active-power-mode
-
-atom-ternjs
-
-autoprefixer
-
-editor-background
-
-emmet
-
-git-plus
-
-open-in-browser
-
-simplified-chinese-menu
+angular_damo 大漠穷秋的angular 2.0视频-记录的项目和笔记
+demo 文件夹是做一些单独测试时用的临时文件
+test和test02是学webpack测试的项目
+jilu.txt 是日常记录的笔记
+dosML.txt 是一些DOS命令和Git的使用方法
+readme.txt 是各个文件和文件夹的解释和说明
