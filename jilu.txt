@@ -226,3 +226,12 @@ $("html").animate({scrollTop:0},500)
 $(document).scroll(function(){
   var x = $("html")[0].scrollTop;//滚动轴距顶部的距离
 })
+
+
+使用position弹性设置宽度：
+left: 0;
+right:0;
+padding:7px 10px 14px 10px;
+padding: 0.07rem 0.1rem 0.14rem 0.1rem;
+width: auto;
+元素的left，right，padding-left和padding-right都确定，width设置为auto
