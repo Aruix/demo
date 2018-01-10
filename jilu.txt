@@ -235,3 +235,6 @@ padding:7px 10px 14px 10px;
 padding: 0.07rem 0.1rem 0.14rem 0.1rem;
 width: auto;
 元素的left，right，padding-left和padding-right都确定，width设置为auto
+
+关于rem.js一定要放在最前面加载，
+如四平日报社项目使用了swiper.js插件，rem在插件之后加载，在firefox中就会出现图片排列错位的问题。
