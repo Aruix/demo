@@ -238,3 +238,23 @@ width: auto;
 
 关于rem.js一定要放在最前面加载，
 如四平日报社项目使用了swiper.js插件，rem在插件之后加载，在firefox中就会出现图片排列错位的问题。
+
+使用js获取select下拉框的选中值：
+原生方法：
+var obj = document.getElementByIdx_x(”testSelect”); //定位id(select的id)
+var index = obj.selectedIndex; // 选中索引
+var text = obj.options[index].text; // 选中文本
+var value = obj.options[index].value; // 选中值
+当然如果option设置了value属性，可以直接写：
+var value = obj.value,而获取文本的话只能用上面的方法
+jquery方法：
+$('#testSelect option:selected').text();//选中的文本
+$('#testSelect option:selected') .val();//选中的值
+$("#testSelect ").get(0).selectedIndex;//索引
+//这里的selected并不是css的选择器，是jquery的特殊写法
+//所以jquery的写法，是先找到select，后面加空格option:selected
+jquery的第二种写法：
+第二种方式
+$("#tesetSelect").find("option:selected").text();//选中的文本
+
+//css3弹性布局flex找时间补上
