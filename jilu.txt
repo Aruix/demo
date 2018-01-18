@@ -238,6 +238,8 @@ width: auto;
 
 关于rem.js一定要放在最前面加载，
 如四平日报社项目使用了swiper.js插件，rem在插件之后加载，在firefox中就会出现图片排列错位的问题。
+此外在网速较慢的时候，rem.js文件没有加载完，HTML的font-size属性没有设置，就会出现排版错乱的情况，
+可以先让body：display-none，在rem.js中添加body.display=block
 
 使用js获取select下拉框的选中值：
 原生方法：
@@ -301,3 +303,20 @@ space-between：与交叉轴两端对齐，轴线之间的间隔平均分布（�
 space-around：每行间隔相同，但是与上边距和下边距是行间隔的一半。
 子级(项目)的属性有也有6个
 1、order
+
+正则表达式：
+1.创建正则表达式
+两种方法：
+var box = new RegExp("box","ig") //输出后 /box/gi
+//第一个参数是字符串，第二个参数可选 是模式修饰符
+//可选的模式修饰符有 i忽略大小写 g全局匹配 m多行匹配
+var box = /box/ig
+2.测试正则表达式
+有两个方法：
+test 在字符串中测试模式匹配，返回true或false
+exec 在字符串中执行匹配搜索，返回结果数组
+var pattern = new RegExp("ox","ig");
+var str = "this is box";
+console.log(pattern.test(str));//true
+console.log(pattern.exec(str));
+

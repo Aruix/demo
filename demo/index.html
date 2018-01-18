@@ -8,14 +8,16 @@
         height: 10rem;
         height: 100px;
       }
-      .ziji{
-
-      }
     </style>
   </head>
   <body>
       <script type="text/javascript">
-        console.log(document.body.hasOwnProperty("addEventListener"));
+        var pattern = new RegExp("box","g");
+        var patt = new RegExp("W3School","g");
+        var str = "this is abox";
+        console.log(pattern.test(str));
+        console.log(patt.exec(str));
+        
       </script>
   </body>
 </html>

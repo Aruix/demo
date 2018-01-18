@@ -1,0 +1,31 @@
+HEXO的使用：
+1.必须要安装nodejs和npm
+2.安装hexo模块--$ npm install -g hexo-cli
+3.新建hexo项目--选择好文件夹，cd进入文件夹 hexo init
+4.建好hexo项目之后,安装相关的依赖包 npm install
+--------
+使用主题
+1.找好主题之后，在themes文件夹下，利用git命令 
+git clone git链接 <folder> //folder就是文件夹的名字 
+2.不同的主题可能需要不同的依赖包，所以需要下载相对的依赖包
+3.将_config.yml中的theme修改为 <folder>
+举个例子（主题maupassant主题安装）：
+克隆主题
+$ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
+安装依赖
+$ npm install hexo-renderer-pug --save
+$ npm install hexo-renderer-sass --save
+修改_config.yml文件
+theme: maupassant
+
+HEXO常用操作：
+HEXO的言语标题描述都可以在_config.yml中修改
+一般下载的主题中也会有_config.yml文件，可以做一些相应的修改。
+每个属性对应的操作，要查看作者提供文档。
+如何实现站内搜索
+站内搜索需要自己申请一个swiftype账号，然后把swiftype_key填写到主题中_config.yml相应的地方
+已注册swiftype账号 w_zengrui@126.com ，但是需要连入自己的域名。
+
+如何写文章：
+hexo的文章是.md格式的文件，需要了解文件的书写格式以及hexo的
+
