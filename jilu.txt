@@ -320,3 +320,14 @@ var str = "this is box";
 console.log(pattern.test(str));//true
 console.log(pattern.exec(str));
 
+局域网内使用Apache服务器访问本机文件
+在httpd.conf文件中添加如下：
+Listen 82
+<VirtualHost 192.168.1.178:82>
+	ServerName 192.168.1.178:82
+	DocumentRoot C:\modile
+	<Directory C:\modile>
+		Require all granted
+	</Directory>
+</VirtualHost>
+*这里要注意文件路径不能是电脑的桌面
