@@ -34,5 +34,12 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 ``` bash
 $ hexo deploy
 ```
+最后测试一下代码块：
+{% codeblock lang:js %}
+var x = 1;
+var y = b;
+alert(x+y);
+document.getElementById('as').innerHTML = ;
+{% endcodeblock %}
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)
