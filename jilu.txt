@@ -331,3 +331,6 @@ Listen 82
 	</Directory>
 </VirtualHost>
 *这里要注意文件路径不能是电脑的桌面
+
+css3属性appearance，主流浏览器都不支持，
+但是-webkit-appearance和-moz-appearance可以被浏览器识别。
