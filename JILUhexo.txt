@@ -1,3 +1,4 @@
+HEXO是一个静态的页面
 HEXO的使用：
 1.必须要安装nodejs和npm
 2.安装hexo模块--$ npm install -g hexo-cli
@@ -29,3 +30,42 @@ HEXO的言语标题描述都可以在_config.yml中修改
 如何写文章：
 hexo的文章是.md格式的文件，需要了解文件的书写格式以及hexo的
 
+字数统计插件
+相关链接：http://ibruce.info/2015/04/04/busuanzi/
+
+官方常用插件
+相关链接：https://hexo.io/plugins/
+
+接入评论系统
+livere.com/ (比较推荐，不需要备案)
+changyan.kuaizhan.com/
+网易的有言
+
+统计系统接入
+cnzz和百度
+
+部署到GitHub
+第一次用了下面的方法：
+GitHubPages
+使用hexo g和hexo d打包文件之后，在public中，然后将public中的文件，上传到GitHub中。
+登录GitHub之后，进入hexo的文件仓库，点击上面的setting按钮
+下拉到GitHubPages，配置完成。
+没有成功。
+第二种方法：
+1、在GitHub新建一个项目，项目命名为Aruix.github.io（格式不能改变Aruix为自己的用户名）
+2、在本地新建一个hexo的项目，hexo init、npm install、hexo server（成功后说明安装完成）
+3、修改_config.yml文件，如下：
+------
+deploy:
+  type: git
+  repo: git@github.com:Aruix/Aruix.github.io.git
+  branch: master
+------冒号后面要加空格
+3、执行hexo clean删除掉之前打包的public中的文件
+4、hexo g重新打包文件
+5、hexo d部署到GitHub，这时可能会出现下面的错误
+Deployer not found: git错误，此时需要安装hexo-deployer-git插件
+npm install hexo-deployer-git，安装完成后执行hexo d即可。
+
+PHP搭建博客
+使用wordpress
