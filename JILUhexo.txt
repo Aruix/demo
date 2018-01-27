@@ -20,7 +20,8 @@ $ npm install hexo-renderer-sass --save
 theme: maupassant
 
 HEXO常用操作：
-HEXO的言语标题描述都可以在_config.yml中修改
+HEXO的言语标题描述都可以在_config.yml中修改，
+语言在根目录下的_config.yml文件中的language设置
 一般下载的主题中也会有_config.yml文件，可以做一些相应的修改。
 每个属性对应的操作，要查看作者提供文档。
 如何实现站内搜索
@@ -66,6 +67,18 @@ deploy:
 5、hexo d部署到GitHub，这时可能会出现下面的错误
 Deployer not found: git错误，此时需要安装hexo-deployer-git插件
 npm install hexo-deployer-git，安装完成后执行hexo d即可。
+
+HEXO域名解析：
+1.自己申请一个域名
+2.在服务台，把域名解析到aruix.github.io,如下：
+CNAME	www	默认	aruix.github.io	10 分钟
+A	@	默认	192.30.252.154	--	10 分钟
+A	@	默认	192.30.252.153	--	10 分钟
+其中第一个是自己的git域名，第二个和第三个是GitHub提供的ip地址，三者缺一不可
+3.在根目录的source文件夹中，新建一个CNAME文件，没有后缀名
+文件中添加你的域名，不带http如：www.aruix.top
+4.重新生成静态页，上传至GitHub
+5.完成上面的步骤，就可以使用www.aruix.top访问页面了。
 
 PHP搭建博客
 使用wordpress
