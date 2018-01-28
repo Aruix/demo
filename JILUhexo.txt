@@ -27,6 +27,11 @@ HEXO的言语标题描述都可以在_config.yml中修改，
 如何实现站内搜索
 站内搜索需要自己申请一个swiftype账号，然后把swiftype_key填写到主题中_config.yml相应的地方
 已注册swiftype账号 w_zengrui@126.com ，但是需要连入自己的域名。
+站内搜索插件：
+hexo-generator-search
+相关文章：
+https://segmentfault.com/a/1190000011917419
+这是插件好像和.pug的主题有冲突
 
 如何写文章：
 hexo的文章是.md格式的文件，需要了解文件的书写格式以及hexo的
