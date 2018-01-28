@@ -13,7 +13,7 @@ git clone git链接 <folder> //folder就是文件夹的名字
 举个例子（主题maupassant主题安装）：
 克隆主题
 $ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
-安装依赖
+安装依赖（有些主题需要安装依赖，可在GitHub中查看相关的设置）
 $ npm install hexo-renderer-pug --save
 $ npm install hexo-renderer-sass --save
 修改_config.yml文件
