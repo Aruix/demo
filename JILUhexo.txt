@@ -31,7 +31,12 @@ HEXO的言语标题描述都可以在_config.yml中修改，
 hexo-generator-search
 相关文章：
 https://segmentfault.com/a/1190000011917419
-这是插件好像和.pug的主题有冲突
+一般的主题都会内置本地搜索的功能，要开启功能，需要先安装上面的插件
+cnpm install hexo-generator-search --save
+并在根目录的_config.yml中添加：
+search:
+  path: search.xml
+  field: post
 
 如何写文章：
 hexo的文章是.md格式的文件，需要了解文件的书写格式以及hexo的
