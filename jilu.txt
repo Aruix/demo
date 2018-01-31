@@ -345,3 +345,14 @@ video::-webkit-media-controls{
   dispaly:none!important;
 }
 在引入奥点云播放器的插件时，发生了冲突，奥点云在手机端是使用的原生的播放组件，所以奥点云的视频的播放按钮被隐藏了。
+
+对图片进行黑白处理：
+img.gary{
+  -webkit-filter: grayscale(90%); 
+  -moz-filter: grayscale(100%); 
+  -ms-filter: grayscale(100%); 
+  -o-filter: grayscale(100%); 
+  /* filter: grayscale(100%); 
+  filter: gray;  */
+}
+其中filter是对ie做的兼容处理
