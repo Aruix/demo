@@ -38,6 +38,10 @@ search:
   path: search.xml
   field: post
 
+在主题中添加图片
+1、图片的路径是 theme/hhemeName/source/img
+2、图片的引用路径是/img/picName.png
+
 如何写文章：
 hexo的文章是.md格式的文件，需要了解文件的书写格式以及hexo的
 
