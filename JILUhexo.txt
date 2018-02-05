@@ -108,5 +108,27 @@ A	@	默认	192.30.252.153	--	10 分钟
 rm -rf .git 强制删除.git文件
 再把其他的git文件删除 即可。
 
+HEXO主题操作：
+1、将文章内容转换文纯文本，并进行截取
+strip_html(post.content).substring(0,theme.title_length)
+其中theme.title_length是在主题的_config.yml中添加
+2、使用如 阅读全文 归档 等已经设置好各国语言的单词文字时，使用
+__('post.read_more') //read_more可以在主题的language文件夹中查找
+3、获取文章的分类categories
+第一种使用list_categories方法
+list_categories(post.categories, {
+  show_count: false,
+  class: 'post_category',
+  style: 'none'
+})
+最后会生成分类的链接
+第二种方法是：
+{% for tag in post.tags %}
+  <a class="post_category-link" href="{{ tag.path }}">
+  {{ tag.name }}
+  </a>
+{% endfor %}
+其中：.name是分类的名字，.path是分类的链接
+
 PHP搭建博客
 使用wordpress
