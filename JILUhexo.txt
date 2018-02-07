@@ -31,7 +31,7 @@ HEXO的言语标题描述都可以在_config.yml中修改，
 hexo-generator-search
 相关文章：
 https://segmentfault.com/a/1190000011917419
-<<<<<<< HEAD
+
 有些主题只在主页有搜索的功能，要想所有的页面都有搜索的功能：
 1、所有的页面必须都引用相应的js文件
 2.在不同的页面由于路径不同，可能会有找不到search.xml的错误，解决方法是
@@ -45,7 +45,6 @@ cnpm install hexo-generator-search --save
 search:
   path: search.xml
   field: post
->>>>>>> f124fe829db62fca9115294f8f7ac7d628674a1a
 
 在主题中添加图片
 1、图片的路径是 theme/hhemeName/source/img
@@ -130,6 +129,23 @@ list_categories(post.categories, {
   </a>
 {% endfor %}
 其中：.name是分类的名字，.path是分类的链接
+
+hexo有些主题是需要自己新建标签页和分类页，来显示标签合集和分类合集。
+新建方法：
+1、在主题的source文件下，新建一个tags文件夹
+2、在该文件夹内新建一个tags.md文件
+3、在文件中添加如下内容：
+title: 标签集
+date: 2014-12-22 
+type: "tags"
+comments: false //这是屏蔽评论功能的
+同样的新建分类页：
+1、在主题的source文件下，新建一个categories文件夹
+2、在该文件夹内新建一个categories.md文件
+3、在文件中添加如下内容：
+title: 标签集
+date: 2014-12-22 
+type: "categories"
 
 PHP搭建博客
 使用wordpress

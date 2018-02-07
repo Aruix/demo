@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.h5-share.com/h5/christmas2016/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>H5成长中的你</title>
+  <link href="images/style.css" type="text/css" rel="stylesheet">
+  <link id="icon" rel="shortcut icon" href="http://www.h5-share.com/images/icon.ico" media="screen">
+  <script src="images/zepto.min.js"></script>
+  <script src="images/jweixin-1.0.0.js"></script>
+  <style>
+.loadpage{width:100%;height:100%;position:fixed;z-index:100}
+.loadbg{width:100%;height:100%;position:absolute}
+.loadpage img{width:100%;height:100%}
+.loadimgbox{width:49px;height:97px;position:absolute;left:50%;top:35%;margin-left:-24px;overflow:hidden}
+.loadwdbox{width:126px;height:43px;position:absolute;left:50%;top:54%;margin-left:-63px;overflow:hidden}
+.loadwd,.loadimg{position:absolute;width:100%;height:100%;display:none}
+.loadimg1,.loadwd1{display:block}
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){.loadimgbox{width:35px;height:70px;margin-left:-17px}
+.loadwdbox{width:91px;height:31px;margin-left:-45px}
+}@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){.loadimgbox{width:41px;height:82px;margin-left:-21px}
+.loadwdbox{width:107px;height:36px;margin-left:-54px}
+}@media screen and (min-width:414px) and (max-width:768px){.loadimgbox{width:53px;height:107px;margin-left:-27px}
+.loadwdbox{width:139px;height:47px;margin-left:-69px}
+} 
+  </style>
+</head>
+<body>
+  <!--loading页 loading中的图片，尽量使用<img />标签插入-->
+  <div class="loadpage" id="loadpage" style="width: 375px; height: 667px; display: none;">
+    <div class="loadbg"><img src="images/loadingbg.jpg" alt=""></div>
+      
+        <div class="loadimgbox">
+            <img class="loadimg1 loadimg" src="images/loadimg1.png" alt="" style="display: none;">
+            <img class="loadimg2 loadimg" src="images/loadimg2.png" alt="" style="display: none;">
+            <img class="loadimg3 loadimg" src="images/loadimg3.png" alt="" style="display: none;">
+      <img class="loadimg4 loadimg" src="images/loadimg2.png" alt="" style="display: inline;">
+        </div>
+        <div class="loadwdbox">
+          <img class="loadwd1 loadwd" src="images/loadwd0.png" alt="" style="">
+            <img class="loadwd2 loadwd" src="images/loadwd1.png" alt="" style="display: none;">
+            <img class="loadwd3 loadwd" src="images/loadwd2.png" alt="" style="display: none;">
+            <img class="loadwd4 loadwd" src="images/loadwd3.png" alt="" style="display: none;">
+        </div>
+  </div>
+  <!-- loading 结束 -->
+
+  <!-- 音乐 start-->
+  <div class="musicinfo" id="musicinfo" style="width: 44.5px; height: 43px; right: 4%; top: 3%;">
+      <audio id="musicid" src="images/music.mp3" preload="preload" autoplay="autoplay" loop="loop">您的浏览器不支持 audio标签。</audio>
+      <img class="music on roate" src="images/musicon.png">
+  </div>
+  <!-- 音乐 end-->
+  
+  <!-- 主内容 start -->
+  <div class="wrap" style="width: 375px; height: 667px;">
+    <canvas id="canvasbox" width="375" height="667" style="width: 375px; height: 667px;"></canvas>
+    <div id="snowcontainer" style="opacity: 1;">
+      <div id="snowdiv"><div style="top: -50px; left: 61px; animation-name: fade, drop; animation-duration: 18.7262s, 18.7262s; animation-delay: 7.29413s, 7.29413s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 22.7184s;"></div><div style="top: -50px; left: 318px; animation-name: fade, drop; animation-duration: 28.006s, 28.006s; animation-delay: 33.8288s, 33.8288s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 16.4841s;"></div><div style="top: -50px; left: 324px; animation-name: fade, drop; animation-duration: 32.3016s, 32.3016s; animation-delay: 60.809s, 60.809s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 21.5137s;"></div><div style="top: -50px; left: 11px; animation-name: fade, drop; animation-duration: 26.8627s, 26.8627s; animation-delay: 12.4506s, 12.4506s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 16.1465s;"></div><div style="top: -50px; left: 163px; animation-name: fade, drop; animation-duration: 45.5426s, 45.5426s; animation-delay: 48.2351s, 48.2351s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 14.1304s;"></div><div style="top: -50px; left: 234px; animation-name: fade, drop; animation-duration: 43.2541s, 43.2541s; animation-delay: 12.6019s, 12.6019s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 23.2647s;"></div><div style="top: -50px; left: 154px; animation-name: fade, drop; animation-duration: 54.7166s, 54.7166s; animation-delay: 17.049s, 17.049s;"><img src="images/foursnow2.png" style="animation-name: clockwiseSpin; animation-duration: 21.4212s;"></div><div style="top: -50px; left: 315px; animation-name: fade, drop; animation-duration: 56.8171s, 56.8171s; animation-delay: 9.87212s, 9.87212s;"><img src="images/foursnow1.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 17.4688s;"></div><div style="top: -50px; left: 303px; animation-name: fade, drop; animation-duration: 17.437s, 17.437s; animation-delay: 13.4185s, 13.4185s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 16.045s;"></div><div style="top: -50px; left: 292px; animation-name: fade, drop; animation-duration: 42.7432s, 42.7432s; animation-delay: 15.4429s, 15.4429s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 20.8671s;"></div><div style="top: -50px; left: 27px; animation-name: fade, drop; animation-duration: 12.049s, 12.049s; animation-delay: 27.246s, 27.246s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 19.4949s;"></div><div style="top: -50px; left: 97px; animation-name: fade, drop; animation-duration: 45.6647s, 45.6647s; animation-delay: 53.4506s, 53.4506s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 22.8511s;"></div><div style="top: -50px; left: 82px; animation-name: fade, drop; animation-duration: 32.8974s, 32.8974s; animation-delay: 50.8225s, 50.8225s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 15.3301s;"></div><div style="top: -50px; left: 39px; animation-name: fade, drop; animation-duration: 59.7254s, 59.7254s; animation-delay: 30.565s, 30.565s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 23.842s;"></div><div style="top: -50px; left: 294px; animation-name: fade, drop; animation-duration: 22.9962s, 22.9962s; animation-delay: 16.5049s, 16.5049s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 19.2221s;"></div><div style="top: -50px; left: 131px; animation-name: fade, drop; animation-duration: 46.0432s, 46.0432s; animation-delay: 13.1846s, 13.1846s;"><img src="images/foursnow1.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 16.0942s;"></div><div style="top: -50px; left: 285px; animation-name: fade, drop; animation-duration: 33.2853s, 33.2853s; animation-delay: 50.2288s, 50.2288s;"><img src="images/foursnow1.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 12.0992s;"></div><div style="top: -50px; left: 105px; animation-name: fade, drop; animation-duration: 58.236s, 58.236s; animation-delay: 45.2546s, 45.2546s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 18.446s;"></div><div style="top: -50px; left: 21px; animation-name: fade, drop; animation-duration: 37.9222s, 37.9222s; animation-delay: 37.8842s, 37.8842s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 17.1028s;"></div><div style="top: -50px; left: 11px; animation-name: fade, drop; animation-duration: 34.4431s, 34.4431s; animation-delay: 4.76363s, 4.76363s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 15.4561s;"></div><div style="top: -50px; left: 297px; animation-name: fade, drop; animation-duration: 58.0638s, 58.0638s; animation-delay: 41.5397s, 41.5397s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 18.4392s;"></div><div style="top: -50px; left: 294px; animation-name: fade, drop; animation-duration: 36.4711s, 36.4711s; animation-delay: 23.3337s, 23.3337s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.1412s;"></div><div style="top: -50px; left: 61px; animation-name: fade, drop; animation-duration: 26.0627s, 26.0627s; animation-delay: 53.1308s, 53.1308s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 20.9918s;"></div><div style="top: -50px; left: 260px; animation-name: fade, drop; animation-duration: 27.2238s, 27.2238s; animation-delay: 53.6857s, 53.6857s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 18.8193s;"></div><div style="top: -50px; left: 27px; animation-name: fade, drop; animation-duration: 41.609s, 41.609s; animation-delay: 36.9223s, 36.9223s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 23.3859s;"></div><div style="top: -50px; left: 253px; animation-name: fade, drop; animation-duration: 14.1596s, 14.1596s; animation-delay: 19.1391s, 19.1391s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 12.9412s;"></div><div style="top: -50px; left: 173px; animation-name: fade, drop; animation-duration: 14.7938s, 14.7938s; animation-delay: 22.4756s, 22.4756s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 14.5729s;"></div><div style="top: -50px; left: 83px; animation-name: fade, drop; animation-duration: 50.2172s, 50.2172s; animation-delay: 40.6399s, 40.6399s;"><img src="images/foursnow2.png" style="animation-name: clockwiseSpin; animation-duration: 18.311s;"></div><div style="top: -50px; left: 373px; animation-name: fade, drop; animation-duration: 58.3717s, 58.3717s; animation-delay: 37.9976s, 37.9976s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.7548s;"></div><div style="top: -50px; left: 340px; animation-name: fade, drop; animation-duration: 37.3239s, 37.3239s; animation-delay: 4.13914s, 4.13914s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 16.6196s;"></div><div style="top: -50px; left: 87px; animation-name: fade, drop; animation-duration: 45.4364s, 45.4364s; animation-delay: 7.49295s, 7.49295s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 18.4016s;"></div><div style="top: -50px; left: 223px; animation-name: fade, drop; animation-duration: 51.7495s, 51.7495s; animation-delay: 59.015s, 59.015s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 18.5857s;"></div><div style="top: -50px; left: 182px; animation-name: fade, drop; animation-duration: 16.1298s, 16.1298s; animation-delay: 9.11631s, 9.11631s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 12.4372s;"></div><div style="top: -50px; left: 67px; animation-name: fade, drop; animation-duration: 42.8375s, 42.8375s; animation-delay: 42.8162s, 42.8162s;"><img src="images/foursnow2.png" style="animation-name: clockwiseSpin; animation-duration: 19.5692s;"></div><div style="top: -50px; left: 118px; animation-name: fade, drop; animation-duration: 40.5988s, 40.5988s; animation-delay: 47.0493s, 47.0493s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 16.0876s;"></div><div style="top: -50px; left: 50px; animation-name: fade, drop; animation-duration: 20.8158s, 20.8158s; animation-delay: 45.9811s, 45.9811s;"><img src="images/foursnow2.png" style="animation-name: clockwiseSpin; animation-duration: 14.7518s;"></div><div style="top: -50px; left: 205px; animation-name: fade, drop; animation-duration: 57.743s, 57.743s; animation-delay: 8.26676s, 8.26676s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.157s;"></div><div style="top: -50px; left: 300px; animation-name: fade, drop; animation-duration: 35.1535s, 35.1535s; animation-delay: 50.4948s, 50.4948s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 19.0103s;"></div><div style="top: -50px; left: 138px; animation-name: fade, drop; animation-duration: 55.2407s, 55.2407s; animation-delay: 37.0032s, 37.0032s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 19.2744s;"></div><div style="top: -50px; left: 176px; animation-name: fade, drop; animation-duration: 46.6248s, 46.6248s; animation-delay: 48.652s, 48.652s;"><img src="images/foursnow1.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 18.1241s;"></div><div style="top: -50px; left: 330px; animation-name: fade, drop; animation-duration: 35.1366s, 35.1366s; animation-delay: 1.35222s, 1.35222s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 22.2562s;"></div><div style="top: -50px; left: 349px; animation-name: fade, drop; animation-duration: 23.7685s, 23.7685s; animation-delay: 31.6726s, 31.6726s;"><img src="images/foursnow1.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 22.3844s;"></div><div style="top: -50px; left: 35px; animation-name: fade, drop; animation-duration: 18.7608s, 18.7608s; animation-delay: 19.1166s, 19.1166s;"><img src="images/foursnow2.png" style="animation-name: clockwiseSpin; animation-duration: 23.7865s;"></div><div style="top: -50px; left: 330px; animation-name: fade, drop; animation-duration: 33.6631s, 33.6631s; animation-delay: 48.9313s, 48.9313s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 21.9468s;"></div><div style="top: -50px; left: 5px; animation-name: fade, drop; animation-duration: 33.0343s, 33.0343s; animation-delay: 28.6992s, 28.6992s;"><img src="images/foursnow1.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 12.0758s;"></div><div style="top: -50px; left: 188px; animation-name: fade, drop; animation-duration: 27.1078s, 27.1078s; animation-delay: 21.3139s, 21.3139s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 15.5899s;"></div><div style="top: -50px; left: 293px; animation-name: fade, drop; animation-duration: 47.6238s, 47.6238s; animation-delay: 59.903s, 59.903s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 21.819s;"></div><div style="top: -50px; left: 331px; animation-name: fade, drop; animation-duration: 46.5678s, 46.5678s; animation-delay: 27.3997s, 27.3997s;"><img src="images/foursnow1.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.5599s;"></div><div style="top: -50px; left: 87px; animation-name: fade, drop; animation-duration: 42.9379s, 42.9379s; animation-delay: 48.7475s, 48.7475s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 16.4158s;"></div><div style="top: -50px; left: 33px; animation-name: fade, drop; animation-duration: 19.3045s, 19.3045s; animation-delay: 35.9622s, 35.9622s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 17.2695s;"></div><div style="top: -50px; left: 325px; animation-name: fade, drop; animation-duration: 19.4439s, 19.4439s; animation-delay: 52.5441s, 52.5441s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 18.0887s;"></div><div style="top: -50px; left: 313px; animation-name: fade, drop; animation-duration: 35.8158s, 35.8158s; animation-delay: 30.0615s, 30.0615s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.5198s;"></div><div style="top: -50px; left: 195px; animation-name: fade, drop; animation-duration: 33.8606s, 33.8606s; animation-delay: 50.4783s, 50.4783s;"><img src="images/foursnow2.png" style="animation-name: clockwiseSpin; animation-duration: 23.6567s;"></div><div style="top: -50px; left: 206px; animation-name: fade, drop; animation-duration: 44.0746s, 44.0746s; animation-delay: 56.0657s, 56.0657s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 19.2962s;"></div><div style="top: -50px; left: 118px; animation-name: fade, drop; animation-duration: 28.1243s, 28.1243s; animation-delay: 44.5489s, 44.5489s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 19.5402s;"></div><div style="top: -50px; left: 91px; animation-name: fade, drop; animation-duration: 35.3601s, 35.3601s; animation-delay: 15.3678s, 15.3678s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 15.899s;"></div><div style="top: -50px; left: 328px; animation-name: fade, drop; animation-duration: 42.1671s, 42.1671s; animation-delay: 50.6521s, 50.6521s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 14.7885s;"></div><div style="top: -50px; left: 67px; animation-name: fade, drop; animation-duration: 59.1703s, 59.1703s; animation-delay: 55.7218s, 55.7218s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 16.238s;"></div><div style="top: -50px; left: 24px; animation-name: fade, drop; animation-duration: 45.3767s, 45.3767s; animation-delay: 21.0453s, 21.0453s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 14.0984s;"></div><div style="top: -50px; left: 362px; animation-name: fade, drop; animation-duration: 30.7327s, 30.7327s; animation-delay: 42.4962s, 42.4962s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 18.5804s;"></div><div style="top: -50px; left: 277px; animation-name: fade, drop; animation-duration: 36.4344s, 36.4344s; animation-delay: 36.9701s, 36.9701s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 21.2027s;"></div><div style="top: -50px; left: 54px; animation-name: fade, drop; animation-duration: 39.3427s, 39.3427s; animation-delay: 20.8504s, 20.8504s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 16.9636s;"></div><div style="top: -50px; left: 359px; animation-name: fade, drop; animation-duration: 30.1432s, 30.1432s; animation-delay: 47.3349s, 47.3349s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.6244s;"></div><div style="top: -50px; left: 320px; animation-name: fade, drop; animation-duration: 14.5481s, 14.5481s; animation-delay: 6.55835s, 6.55835s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 16.4658s;"></div><div style="top: -50px; left: 308px; animation-name: fade, drop; animation-duration: 56.5767s, 56.5767s; animation-delay: 13.443s, 13.443s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 22.3136s;"></div><div style="top: -50px; left: 255px; animation-name: fade, drop; animation-duration: 54.5898s, 54.5898s; animation-delay: 43.5787s, 43.5787s;"><img src="images/foursnow2.png" style="animation-name: clockwiseSpin; animation-duration: 12.1841s;"></div><div style="top: -50px; left: 199px; animation-name: fade, drop; animation-duration: 36.4714s, 36.4714s; animation-delay: 24.5631s, 24.5631s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.9127s;"></div><div style="top: -50px; left: 101px; animation-name: fade, drop; animation-duration: 31.2446s, 31.2446s; animation-delay: 1.52394s, 1.52394s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 18.4926s;"></div><div style="top: -50px; left: 0px; animation-name: fade, drop; animation-duration: 22.6792s, 22.6792s; animation-delay: 47.0887s, 47.0887s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 23.8188s;"></div><div style="top: -50px; left: 328px; animation-name: fade, drop; animation-duration: 57.227s, 57.227s; animation-delay: 13.657s, 13.657s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 17.6252s;"></div><div style="top: -50px; left: 313px; animation-name: fade, drop; animation-duration: 23.0758s, 23.0758s; animation-delay: 37.1814s, 37.1814s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 12.2704s;"></div><div style="top: -50px; left: 77px; animation-name: fade, drop; animation-duration: 54.4909s, 54.4909s; animation-delay: 40.525s, 40.525s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 18.366s;"></div><div style="top: -50px; left: 292px; animation-name: fade, drop; animation-duration: 39.5699s, 39.5699s; animation-delay: 23.0104s, 23.0104s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 18.3893s;"></div><div style="top: -50px; left: 260px; animation-name: fade, drop; animation-duration: 43.9889s, 43.9889s; animation-delay: 30.2027s, 30.2027s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 15.2181s;"></div><div style="top: -50px; left: 349px; animation-name: fade, drop; animation-duration: 29.7006s, 29.7006s; animation-delay: 33.551s, 33.551s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 17.0734s;"></div><div style="top: -50px; left: 322px; animation-name: fade, drop; animation-duration: 33.052s, 33.052s; animation-delay: 30.6756s, 30.6756s;"><img src="images/foursnow2.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 16.9929s;"></div><div style="top: -50px; left: 29px; animation-name: fade, drop; animation-duration: 34.8988s, 34.8988s; animation-delay: 41.9951s, 41.9951s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 13.6248s;"></div><div style="top: -50px; left: 131px; animation-name: fade, drop; animation-duration: 55.7985s, 55.7985s; animation-delay: 47.3945s, 47.3945s;"><img src="images/foursnow3.png" style="animation-name: counterclockwiseSpinAndFlip; animation-duration: 22.1127s;"></div><div style="top: -50px; left: 79px; animation-name: fade, drop; animation-duration: 31.8265s, 31.8265s; animation-delay: 22.5969s, 22.5969s;"><img src="images/foursnow3.png" style="animation-name: clockwiseSpin; animation-duration: 22.7725s;"></div><div style="top: -50px; left: 115px; animation-name: fade, drop; animation-duration: 56.4518s, 56.4518s; animation-delay: 12.2077s, 12.2077s;"><img src="images/foursnow1.png" style="animation-name: clockwiseSpin; animation-duration: 17.6591s;"></div></div>
+    </div>
+    <!-- 第一个按钮 -->
+    <div id="nextbtn1" class="nextbtn" style="display: none; opacity: 0;">
+      <div class="nextbtnbox">
+        <div class="circlebox">
+          <div class="circle circle1"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="nextwd nextwd1"></div>
+      </div>
+    </div>
+    <!-- 第二个按钮 -->
+    <div id="nextbtn2" class="nextbtn" style="display: none; opacity: 0;">
+      <div class="nextbtnbox">
+        <div class="circlebox">
+          <div class="circle circle2"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="nextwd nextwd2"></div>
+      </div>
+    </div>
+    <!-- 第三个按钮 -->
+    <div id="nextbtn3" class="nextbtn" style="display: none; opacity: 0;">
+      <div class="nextbtnbox">
+        <div class="circlebox">
+          <div class="circle circle3"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="nextwd nextwd3"></div>
+      </div>
+    </div>
+    <!-- 第四个按钮 -->
+    <div id="nextbtn4" class="nextbtn" style="display: none; opacity: 0;">
+      <div class="nextbtnbox">
+        <div class="circlebox">
+          <div class="circle circle4"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="nextwd nextwd4"></div>
+      </div>
+    </div>
+    <div id="qrcodebox" style="display: block; opacity: 1;" class="fadeInDown">
+      <div class="qrcodeinfo">
+        <div class="qrcode"><img src="images/qrcode.png" alt=""></div>
+        <div class="drop1 fadeOutDown1"></div>
+        <div class="drop2 fadeOutDown2"></div>
+        <div class="drop3 fadeOutDown3"></div>
+        <div class="drop4 fadeOutDown4"></div>
+        <div class="drop5 fadeOutDown5"></div>
+        <div class="qrcodetop"></div>
+        <div class="qrcodewd"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 主内容 end -->
+
+    <!--旋屏提示-->
+  <div id="orientLayer" class="mod-orient-layer">
+      <div class="mod-orient-layer__content">
+          <i class="icon mod-orient-layer__icon-orient"></i>
+          <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+      </div>
+  </div>
+<script src="images/imagesLoader.min.js"></script>
+<script src="images/preloadjs-0.6.2.min.js"></script>
+<script type="text/javascript">
+/*loading*/
+var clientWidth=document.documentElement.clientWidth,
+    clientHeight=document.documentElement.clientHeight;
+document.getElementById('loadpage').style.width=clientWidth+'px';
+document.getElementById('loadpage').style.height=clientHeight+'px';
+document.getElementById('canvasbox').style.width=clientWidth+'px';
+document.getElementById('canvasbox').style.height=clientHeight+'px';
+document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+var musicid = document.getElementById('musicid'),
+
+crysound= document.getElementById('crysound'),
+laughsound= document.getElementById('laughsound');
+
+
+/*loading页循环序列帧动画*/ 
+var loadNum,
+  loadImgid = 0,loadWdid = 0;
+
+function loadImages(obj,loadIndex,loadNum,time){
+  setInterval(function () {
+    loadIndex++;
+      if (loadIndex > loadNum) {
+          loadIndex = 0;
+      }
+      obj.hide();
+      obj.eq(loadIndex).show();
+      // console.log('loadIndex：'+loadIndex);
+  }, time);
+}
+var loadwdImg =  $(".loadimg"),
+  loadWd =  $(".loadwd");
+loadImages(loadwdImg,loadImgid,3,200);
+loadImages(loadWd,loadWdid,3,250);
+
+//图片预加载
+var loader=new ImagesLoader();
+ loader.loadImages([
+      'loadingbg.jpg',
+      'loadimg1.png',
+      'loadimg2.png',
+      'loadimg3.png',
+      'loadwd0.png',
+      'loadwd1.png',
+      'loadwd2.png',
+      'loadwd3.png',
+      'pixels.png',
+      'qrcode.png',
+      'musicon.png',
+      'logo.png',
+      'onebg.jpg',
+      'onecry.png',
+      'onegift.png',
+      'onehand.png',
+      'onekidwd.png',
+      'onelaugh.png',
+      'onewd.png',
+      'onenextwd.png',
+      'twobg.jpg',
+      'twodark.png',
+      'twogift1.png',
+      'twogift2.png',
+      'twogirl1.png',
+      'twogirl2.png',
+      'twogirl3.png',
+      'twohand.png',
+      'twoopen.png',
+      'twoshadow.png',
+      'twowd.png',
+      'twonextwd.png',
+      'threebg.jpg',
+      'threegirl1.png',
+      'threegirl2.png',
+      'threehand.png',
+      'threesm1.png',
+      'threesm2.png',
+      'threewd.png',
+      'threenextwd.png',
+      'fourbg.jpg',
+      'fourboy1.png',
+      'fourboy2.png',
+      'fourboy3.png',
+      'fourfly.png',
+      'fourhand.png',
+      'fourscarf.png',
+      'foursnow1.png',
+      'foursnow2.png',
+      'foursnow3.png',
+      'fourwd1.png',
+      'fourwd2.png',
+      'fournextwd.png',
+      'fivebg.png',
+      'fivehouse.png',
+      'fivesanta.png',
+      'qrcodebg.png',
+      'qrcodebgtop.png',
+      'qrcodewd.png',
+      'drop1.png',
+      'drop2.png',
+      'drop3.png',
+      'drop4.png',
+      'drop5.png',
+      'thumb.jpg'    
+ ],'images/');
+ loader.complete(function(){
+    console.log('completed');
+    //加载完毕播放音乐
+    autoPlayMusic('#musicid');
+    init();
+    setTimeout(function(){
+      $('.wrap').show();
+      snowInit();
+    },5); 
+    setTimeout(function(){
+      $('.loadpage').hide();
+    },500);  
+ });
+ loader.process(function(){
+   // console.log('process'+this.processNum);
+   autoPlayMusic('#musicid');
+   //autoPlayMusic('musicid');
+ });
+ loader.start();
+$('.wrap').css({'width':clientWidth+'px','height':clientHeight+'px'});
+
+// 音乐播放
+function autoPlayMusic(musicName) {
+    // 自动播放音乐效果，解决微信自动播放问题
+    function musicInWeixinHandler() {
+        musicPlay(true,musicName);
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            musicPlay(true,musicName);
+        }, false);
+        document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+    }
+    document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+}
+function musicPlay(isPlay,musicName) {
+    var media = document.querySelector(musicName);
+    if (isPlay && media.paused) {
+        media.play();
+    }
+    if (!isPlay && !media.paused) {
+        media.pause();
+    }
+}
+/*音乐*/
+$('.music').on('click',function(){
+    if($(this).hasClass('on')){
+        musicid.pause();
+        $(this).removeClass('on roate').addClass('off');
+        /*$(this).attr('src','images/musicoff.png');*/
+    }else {
+        musicid.play();
+        $(this).removeClass('off').addClass('on roate');
+        /*$(this).attr('src','images/musicon.png');*/
+    }  
+});
+</script><img src="images/loadingbg.jpg" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/loadimg1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/loadimg2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/loadimg3.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/loadwd0.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/loadwd1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/loadwd2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/loadwd3.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/pixels.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;">
+<script src="images/easeljs-0.8.2.min.js"></script>
+<script src="images/tweenjs-0.6.2.min.js"></script>
+<script type="text/javascript">
+  var cjs = createjs,canvas,stage,container,w = window.innerWidth, h = window.innerHeight,image,scaleBasic,scaleWidth = w/375,scaleHeight = h/667;
+    if(scaleWidth<scaleHeight){
+        scaleBasic = 0.5*scaleWidth;
+    }else if(scaleWidth>scaleHeight){
+        scaleBasic = 0.5*scaleHeight;
+    }else{
+        scaleBasic = 0.5; 
+    }
+    changBgx = parseInt(0.4*w)/2,
+    changBgy = parseInt(0.4*h)/2;
+
+
+//底层共用
+var iBase = {
+    Id: function(name){
+        return document.getElementById(name);
+    },
+    SetOpacity: function(ev, v){
+        ev.filters ? ev.style.filter = 'alpha(opacity=' + v + ')' : ev.style.opacity = v / 100;
+    }
+}
+
+//淡入效果(含淡入到指定透明度)
+function fadeIn(elem, speed, opacity){
+    speed = speed || 20;
+    opacity = opacity || 100;
+    elem.style.display = 'block';
+    iBase.SetOpacity(elem, 0);
+    var val = 0;
+    (function(){
+        iBase.SetOpacity(elem, val);
+        val += 5;
+        if (val <= opacity) {
+            setTimeout(arguments.callee, speed)
+        }
+    })();
+}
+
+function fadeOut(elem, speed, opacity){
+    speed = speed || 20;
+    opacity = opacity || 0;
+    var val = 100;
+    (function(){
+        iBase.SetOpacity(elem, val);
+        val -= 5;
+        if (val >= opacity) {
+            setTimeout(arguments.callee, speed);
+        }else if (val < 0) {
+            elem.style.display = 'none';
+        }
+    })();
+}
+  function init() {
+    var nextbtn = $('.nextbtn');
+    nextbtn.css({'display':'none','opacity':0});
+    var qrcodeBox = $('#qrcodebox');
+    qrcodeBox.css({'display':'none','opacity':0});
+    var musicinfo = $('.musicinfo');
+    musicinfo.css({'width':scaleBasic*89+'px','height':scaleBasic*86+'px','right':4+'%','top':3+'%'});  
+    //设置canvas属性
+    canvas = document.getElementById('canvasbox');
+    canvas.width = w;
+    canvas.height = h;
+    
+    //创建舞台
+    stage = new cjs.Stage(canvas);
+    container = new cjs.Container();//绘制外部容器
+    stage.addChild(container);
+
+    //加载图片
+    manifest = [
+        // 第一屏图片
+        {src: 'loadingbg.jpg', id: 'onebg'},
+        {src: 'onewd.png', id: 'onewd'},
+        {src: 'onebg.jpg', id: 'onebgnew'},
+        {src: 'onekidwd.png', id: 'onekidwd'},
+        {src: 'onecry.png', id: 'onecry'},
+        {src: 'onelaugh.png', id: 'onelaugh'},
+        {src: 'onehand.png', id: 'onehand'},
+        {src: 'onegift.png', id: 'onegift'},
+        // 第二屏图片
+        {src: 'twobg.jpg', id: 'twobg'},
+        {src: 'twogirl1.png', id: 'twogirl1'},
+        {src: 'twogirl2.png', id: 'twogirl2'},
+        {src: 'twogirl3.png', id: 'twogirl3'},
+        {src: 'twodark.png', id: 'twodark'},
+        {src: 'twoopen.png', id: 'twoopen'},
+        {src: 'twogift1.png', id: 'twogift1'},
+        {src: 'twoshadow.png', id: 'twoshadow'},
+        {src: 'twohand.png', id: 'twohand'},
+        {src: 'twogift2.png', id: 'twogift2'},
+        {src: 'twowd.png', id: 'twowd'},
+        /*第三屏元素*/
+        {src: 'threebg.jpg', id: 'threebg'},
+        {src: 'threesm1.png', id: 'threesm1'},
+        {src: 'threesm2.png', id: 'threesm2'},
+        {src: 'threegirl1.png', id: 'threegirl1'},
+        {src: 'threegirl2.png', id: 'threegirl2'},
+        {src: 'threehand.png', id: 'threehand'},
+        {src: 'threewd.png', id: 'threewd'},
+        /*第四屏元素*/
+        {src: 'fourbg.jpg', id: 'fourbg'},
+        {src: 'fourboy1.png', id: 'fourboy1'},
+        {src: 'fourboy2.png', id: 'fourboy2'},
+        {src: 'fourboy3.png', id: 'fourboy3'},
+        {src: 'fourfly.png', id: 'fourfly'},
+        {src: 'fourhand.png', id: 'fourhand'},
+        {src: 'fourscarf.png', id: 'fourscarf'},
+        {src: 'fourwd1.png', id: 'fourwd1'},
+        {src: 'fourwd2.png', id: 'fourwd2'},
+        /*第五屏元素*/
+        {src: 'fivebg.png', id: 'fivebg'},
+        {src: 'fivehouse.png', id: 'fivehouse'},
+        {src: 'fivesanta.png', id: 'fivesanta'},
+        {src: 'logo.png', id: 'logo'},
+        {src: 'qrcode.png', id: 'qrcode'}
+    ];
+
+    loader = new createjs.LoadQueue(false);
+    loader.addEventListener('complete', handleComplete);
+    loader.loadManifest(manifest, true, 'images/');
+}
+
+  /************************* 微信分享功能 ********************************/     
+  var sharethis=function(){
+  var server = 'http://www.h5-share.com/h5share.php/Home/Share/JDOU_shareWx_niu/';
+
+  var currenturl = window.location.href;
+  var postData={ url:currenturl}
+  $.ajax({
+        type: "POST",
+        url: server,
+        data: postData,
+        async: true,
+        dataType: "json",
+        success: function (result) {
+                //分享功能 s
+                wx.config({
+                    debug: false,
+                    appId: result.appId,
+                    timestamp: result.timestamp,
+                    nonceStr: result.nonceStr,
+                    signature: result.signature,
+                    jsApiList: [
+                        'checkJsApi',
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'onMenuShareWeibo'
+                    ]
+                });
+                wechatReady();
+        },
+        error: function () {
+          //window.alert("系统错误，请稍后再试");
+        }
+    });
+  }
+
+
+  function wechatReady() {     
+    wx.ready(function () {
+        var appMessageShareData = {
+        title: 'H5成长中的你',
+        desc:'快乐常在，幸福常伴，H5案例分享，愿与你携手度过以后的每一个圣诞...',
+        link: window.location.href,
+        imgUrl:'http://www.h5-share.com/h5/christmas2016/images/thumb.jpg'
+      };       
+      wx.onMenuShareAppMessage(appMessageShareData);
+      wx.onMenuShareTimeline(appMessageShareData);
+      wx.onMenuShareQQ(appMessageShareData);
+      wx.onMenuShareWeibo(appMessageShareData);
+    });  
+    wx.error(function (res) {
+       //alert(res.errMsg);
+    });
+  }
+  sharethis();
+</script>
+<script src="images/jscript.min.js"></script>
+  <script type="text/javascript" src="images/stats.js" name="MTAH5" sid="500370929"></script>
+
+<img src="images/qrcode.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/musicon.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/logo.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onebg.jpg" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onecry.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onegift.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onehand.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onekidwd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onelaugh.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onewd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/onenextwd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twobg.jpg" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twodark.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twogift1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twogift2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twogirl1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twogirl2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twogirl3.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twohand.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twoopen.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twoshadow.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twowd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/twonextwd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threebg.jpg" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threegirl1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threegirl2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threehand.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threesm1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threesm2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threewd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/threenextwd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourbg.jpg" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourboy1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourboy2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourboy3.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourfly.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourhand.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourscarf.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/foursnow1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/foursnow2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/foursnow3.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourwd1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fourwd2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fournextwd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fivebg.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fivehouse.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/fivesanta.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/qrcodebg.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/qrcodebgtop.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/qrcodewd.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/drop1.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/drop2.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/drop3.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/drop4.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/drop5.png" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><img src="images/thumb.jpg" style="visibility: hidden; width: 1px; height: 1px; position: absolute;"><div id="cli_dialog_div"></div></body></html>
