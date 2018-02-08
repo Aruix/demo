@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			html,body,.zid{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			.mek{
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+			.mek img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="mek">
+		</div>
+		<script type="text/javascript">
+			var menu3x = 1;
+			$(".qjsj").remove();
+			$('.xjs').remove();
+			$(".mek").append('<img class="xjs" style="display:none" src="../img/0a.png"/>')
+			for (var i=1;i<19;i++) {
+				$(".mek").append('<img class="xjs" style="display:none" src="../img/'+i+'.png"/>')
+			}
+			for (var y=1;y<20;y++) {
+				(function(x){
+		   			setTimeout(function(){
+						$('.xjs').eq(x-1).fadeIn(500)
+					},(x*700));
+		   		})(y)
+			}
+			menu3x = 2;
+			$(".mek").click(function(){
+				if(menu3x == 1){
+					$(".qjsj").remove();
+					$('.xjs').fadeOut(500).remove();
+					$(this).append('<img class="xjs" style="display:none" src="../img/0a.png"/>')
+					for (var i=1;i<19;i++) {
+						$(this).append('<img class="xjs" style="display:none" src="../img/'+i+'.png"/>')
+					}
+					for (var y=1;y<20;y++) {
+						(function(x){
+				   			setTimeout(function(){
+								$('.xjs').eq(x-1).fadeIn(500)
+							},(x*700));
+				   		})(y)
+					}
+					menu3x = 2
+				}else if(menu3x == 2){
+					//$('.xjs').fadeOut(500).remove();
+					$('.xjs').eq(0).fadeOut(500)
+					$(this).append('<img class="qjsj" style="display:none" src="../img/qjsj-1.png"/>')
+					for (var i=1;i<12;i++) {
+						$(this).append('<img class="qjsj" style="display:none" src="../img/a-'+i+'.png"/>')
+					}
+					for (var y=1;y<13;y++) {
+						(function(x){
+				   			setTimeout(function(){
+								$('.qjsj').eq(x-1).fadeIn(500)
+							},(x*700));
+				   		})(y)
+					}
+					menu3x = 1
+				}
+			})
+		</script>
+	</body>
+</html>

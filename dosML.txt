@@ -134,3 +134,10 @@ git pull --rebase origin master
 新建仓库
 1、点击remote->add。添加远程的服务器
 2、通过 git config user.name ""和git config user.email ""添加有户名和邮箱(如果我们在安装git时，全局设置了用户名和密码，就不需要继续设置了)
+
+上传github时忽略部分文件的方法
+利用dos命令：
+touch .gitigonre
+在.gitigonre中设置要忽略的文件
+/img/     即忽略掉img文件夹
+*.class   忽略掉.class的文件

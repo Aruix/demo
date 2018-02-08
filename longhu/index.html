@@ -1,54 +1,260 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>龙湖菜单测试</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <style>
-        html,body{
-            padding: 0;
-            margin: 0;
-        }
-        div{
-            position: relative;
-        }
-        img{
-            position: absolute;
-            top: 0;
-            left: -2px;
-            width: 100%;
-        }
-        .pg2,.pg3{
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <img class="pg1" src="img/1.jpg" alt="">
-        <img class="pg2" src="img/2.jpg" alt="">
-        <img class="pg3" src="img/3.jpg" alt="">
-    </div>
-    <script>
-        var div = document.querySelector("div");
-        var index = 0;
-        var img = document.querySelectorAll("img");
-        div.onclick = function(){
-            if(index==0){
-                img[1].style.display = "block";
-                img[0].style.display = "none";
-                img[2].style.display = "none";
-                index = 1;
-            }else if(index==1){
-                img[2].style.display = "block";
-                img[0].style.display = "none";
-                img[1].style.display = "none";
-                index = 0;
-            }
-        }
-    </script>
-</body>
+<html class="nos">
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=1920,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animations.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript">
+			document.write('<div id="loading"><div class="spinner"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div></div>');
+		</script>
+		<title>ls</title>
+	</head>
+	<body class="buk pt-perspective">
+		<img style="width: 100%;height: 100%; opacity: 0;" src="img/pg3-1-bg.jpg"/>
+		<div class="header pg pg1 pt-page-current">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide sw0">
+					<div class="k">
+						<img class="bgImg" src="img/lb0.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img src="img/lb0_t1.png"/>
+						<img src="img/lb0_t2.png"/>
+					</div>
+				</div>
+				<div class="swiper-slide sw1">
+					<div class="k">
+						<img class="bgImg" src="img/lb1.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do left-right" src="img/pg1-bg1-icon3.png"/>
+						<img class="do right-left" src="img/pg1-bg1-icon4.png"/>
+					</div>
+				</div>
+		        <div class="swiper-slide sw2">
+		        	<div class="k">
+						<img class="bgImg" src="img/lb2.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do do1 top-bottom" src="img/pg1-bg2-icon1.png"/>
+						<img class="do do2 top-bottom" src="img/pg1-bg2-icon2.png"/>
+						<img class="do do3 top-bottom" src="img/pg1-bg2-icon3.png"/>
+						<img class="do do4 top-bottom" src="img/pg1-bg2-icon4.png"/>
+					</div>
+		        </div>
+		        <div class="swiper-slide sw3">
+		        	<div class="k">
+						<img class="bgImg" src="img/lb3.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do left-right" src="img/pg1-bg3-icon1.png"/>
+						<img class="do right-left" src="img/pg1-bg3-icon2.png"/>
+					</div>
+		        </div>
+		        <div class="swiper-slide sw4">
+		        	<div class="k">
+						<img class="bgImg" src="img/lb4.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do left-right" src="img/pg1-bg4-icon1.png"/>
+						<img class="do do2 left-right" src="img/pg1-bg4-icon2.png"/>
+						<img class="do do3 left-right" src="img/pg1-bg4-icon3.png"/>
+					</div>
+		        </div>
+		        <div class="swiper-slide sw5">
+		        	<div class="k">
+						<img class="bgImg" src="img/lb5.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do opacity0-1" src="img/pg1-bg5-icon1.png"/>
+						<img class="do do2 opacity0-1" src="img/pg1-bg5-icon2.png"/>
+						<img class="do do3 opacity0-1" src="img/pg1-bg5-icon3.png"/>
+						<img class="do do4 opacity0-1" src="img/pg1-bg5-icon4.png"/>
+					</div>
+		        </div>
+		        <div class="swiper-slide sw6">
+		        	<div class="k">
+						<img class="bgImg" src="img/lb6.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do top-bottom" src="img/pg1-bg6-icon1.png"/>
+						<img class="do opacity0-1" src="img/pg1-bg6-icon2.png"/>
+					</div>
+		        </div>
+		        <div class="swiper-slide sw7">
+		        	<div class="k">
+						<img class="bgImg" src="img/lb7.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do top-bottom" src="img/pg1-bg7-icon1.png"/>
+						<img class="do do2 top-bottom" src="img/pg1-bg7-icon2.png"/>
+					</div>
+		        </div>
+		        <div class="swiper-slide sw8">
+		        	<div class="k">
+						<img class="bgImg" src="img/lb8.jpg"/>
+						<img src="img/pg1-bg1-icon1.png"/>
+						<img src="img/pg1-bg1-icon2.png"/>
+						<img class="do top-bottom" src="img/pg1-bg8-icon1.png"/>
+						<img class="do do2 top-bottom" src="img/pg1-bg8-icon2.png"/>
+						<img class="do do1 left-right" src="img/pg1-bg8-icon3.png"/>
+						<img class="do do2 left-right" src="img/pg1-bg8-icon4.png"/>
+						<img class="do do3 left-right" src="img/pg1-bg8-icon5.png"/>
+						<img class="do do4 left-right" src="img/pg1-bg8-icon6.png"/>
+					</div>
+		        </div>
+			</div>
+		</div>
+		<div class="menu1 pg pg2">
+			<div class="ks ksn">
+				<img src="img/pg2-bg.png"/>
+				<div id="particles-jss"></div>
+				<img class="do do4 left-right" src="img/pg2-bg-text.png"/>
+				<img class="do do1 right-left" src="img/pg2-bg-text2.png"/>
+				<img class="do do1 left-right" src="img/pg2-menu1.png"/>
+				<img class="do do2 left-right" src="img/pg2-menu2.png"/>
+				<img class="do do3 left-right" src="img/pg2-menu3.png"/>
+				<img class="do do4 left-right" src="img/pg2-menu4.png"/>
+				<div class="menu-k">
+					<div class="navMenu" data-url="pg3"></div>
+					<div class="navMenu" data-url="pg4"></div>
+					<div class="navMenu" data-url="pg5"></div>
+					<div class="navMenu" data-url="pg6"></div>
+				</div>
+			</div>
+			<div class="ks kss">
+				<img src="img/pg2-bg-n.png"/>
+				<div id="particles-js"></div>
+				<img class="do do4 tex1" src="img/pg2-bg-text1-n.png"/>
+				<img class="do do4 tex2" src="img/pg2-bg-text2-n.png"/>
+				<img class="do do4 tex3" src="img/pg2-bg-text3-n.png"/>
+				<img class="do do5 icon1" src="img/pg2-menu1-n.png"/>
+				<img class="do do6 icon2" src="img/pg2-menu2-n.png"/>
+				<img class="do do7 icon3" src="img/pg2-menu3-n.png"/>
+				<img class="do do8 icon4" src="img/pg2-menu4-n.png"/>
+				<div class="menu-k">
+					<div class="navMenu" data-url="pg3"></div>
+					<div class="navMenu" data-url="pg4"></div>
+					<div class="navMenu" data-url="pg5"></div>
+					<div class="navMenu" data-url="pg6"></div>
+				</div>
+			</div>
+		</div>
+		<div class="menu2 pg pg3 ptqw">
+			
+		</div>
+		<div class="menu3 pg pg4">
+			<div class="wok">
+				<img src="img/bg4-bg1.png"/>
+				<img class="logos" src="img/left-LOGO.png"/>
+				<img class="logos" src="img/right-LOGO.png"/>
+				<div id="particles-js1"></div>
+				<img class="sett action" src="img/pg4-vr.png"/>
+				<img class="sett" src="img/pg4-video.png"/>
+				<img class="sett" src="img/pg4-pic.png"/>
+				<div class="center">
+					<div class="menus">
+						<div class="mess" data-url="vr"></div>
+						<div class="mess" data-url="video"></div>
+						<div class="mess" data-url="pic"></div>
+					</div>
+					<div class="center-right">
+						<div class="crs vr">
+							<div class="qpsc"></div>
+							<iframe id="vrk" width="100%" height="100%" frameborder='0' src=""></iframe>
+							<img class="qpsa return-x" src="img/return.png"/>
+						</div>
+						<div class="crs video vid-kk">
+							<video webkit-playsinline='' playsinline='' x5-playsinline="" width="1" height="1" src="css/szyh.mp4">
+								当前浏览器不支持 video直接播放，点击这里下载视频： <a href="css/szyh.mp4">下载视频</a>
+							</video>
+							<div class="poster"><div></div></div>
+						</div>
+						<div class="crs pic">
+							<div class="qpsc"></div>
+							<iframe width="100%" height="100%" frameborder='0' src="">
+								<img class="logos" src="../img/left-LOGO.png"/>
+								<img class="logos" src="../img/right-LOGO.png"/>
+							</iframe>
+							<img class="qpsa return-x" src="img/return.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div  data-url="pg2" class="return navMenu"></div>
+		</div>
+		<div class="menu4 pg pg5">
+			<div class="mek">
+				<img src="img/pg5-bg-n.png"/>
+				<img class="texx2" src="img/pg5-icon-1.png"/>
+				<img class="texx3" src="img/pg5-icon-2.png"/>
+				<div class="menu5-m">
+					<div data-url="pg9" class="ptcp"></div>
+					<div data-url="pg10" class="ptcp"></div>
+				</div>
+			</div>
+			<div  data-url="pg2" class="return navMenu"></div>
+		</div>
+		<div class="menu5 pg pg6">
+			<div class="wok">
+				<img src="img/bg4-bg1-n.png"/>
+				<div id="particles-js2"></div>
+				<img class="texx1" src="img/menu5-text1.png"/>
+				<!--<img src="img/menu5-text2.png"/>-->
+				<img class="mic1 texx2" src="img/menu5-icon1-n.png"/>
+				<img class="mic2 texx3" src="img/menu5-icon2-n.png"/>
+				<div class="menu5-m">
+					<div data-url="pg7" class="ptcp"></div>
+					<div data-url="pg8" class="ptcp"></div>
+				</div>
+			</div>
+			<div  data-url="pg2" class="return navMenu"></div>
+		</div>
+		<div class="pg pg7">
+			<iframe width="100%" height="100%" frameborder='0' src="" width="" height=""></iframe>
+			<img data-url="pg6" class="return ptcpRe" src="img/return.png"/>
+		</div>
+		<div class="pg pg8">
+			<iframe width="100%" height="100%" frameborder='0' src="" width="" height=""></iframe>
+			<img data-url="pg6" class="return ptcpRe" src="img/return.png"/>
+		</div>
+		<div class="pg pg9">
+			<iframe width="100%" height="100%" frameborder='0' src="" width="" height=""></iframe>
+			<img data-url="pg5" class="return ptcpRe" src="img/return.png"/>
+		</div>
+		<div class="pg pg10">
+			<iframe class="lifek" width="100%" height="100%" frameborder='0' src="" width="" height=""></iframe>
+			<img data-url="pg5" class="return ptcpRe" src="img/return.png"/>
+		</div>
+		<script src="js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var scWidth = $("body").width();
+		    var scHeight = $("body").height();
+		    var bWidth,bHeight,bleft,btop;
+		    if((scWidth/scHeight)>(1920/1080)){
+		    	bHeight = scHeight;
+		    	bWidth = scHeight/1080*1920;
+		    	btop = 0;
+		    	bleft = (scWidth-bWidth)/2;
+		    }else{
+		    	bWidth = scWidth;
+		    	bHeight = scWidth/1920*1080;
+		    	bleft = 0;
+		    	btop = (scHeight-bHeight)/2;
+		    }
+		    $(".buk").css({
+		    	'width':bWidth+'px',
+		    	'height':bHeight+'px',
+		    	'top':btop,
+		    	'left':bleft
+		    })
+		</script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/particles.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/demo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>
+	</body>
 </html>

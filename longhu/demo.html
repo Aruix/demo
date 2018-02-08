@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui-1.8.20.custom.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/turn.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.ui.css"/>
+		<title></title>
+		<style type="text/css">
+			html,body{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			.pg1{
+				line-height: 400px;
+				text-align: center;
+				background-color: blue!important;
+			}
+			.book-k{
+				margin: 50px;
+			}
+			#flipbook .shadow{
+				-webkit-transition: -webkit-box-shadow 0.5s;
+				-moz-transition: -moz-box-shadow 0.5s;
+				-o-transition: -webkit-box-shadow 0.5s;
+				-ms-transition: -ms-box-shadow 0.5s;
+			
+				-webkit-box-shadow:0 0 10px #999;
+				-moz-box-shadow:0 0 10px #999;
+				-ms-box-shadow:0 0 10px #999;
+				-o-box-shadow:0 0 10px #999;
+				box-shadow:0 0 10px #999;
+			}
+			
+			.flipbook .hard{
+				background-color:white;
+				-webkit-box-shadow:none;
+				-moz-box-shadow:none;
+				-ms-box-shadow:none;
+				box-shadow:none;
+			}
+
+			
+			#flipbook .page{
+				-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+				-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+				-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+				-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+				box-shadow:0 0 20px rgba(0,0,0,0.2);
+			}
+			
+			.sj-book .even{
+				background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+				background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+				background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+				background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+				background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+				background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+			}
+			
+			.sj-book .odd{
+				background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #fff), color-stop(1, #cacaca));
+				background-image:-webkit-linear-gradient(right, #fff 95%, #cacaca 100%);
+				background-image:-moz-linear-gradient(right, #fff 95%, #cacaca 100%);
+				background-image:-ms-linear-gradient(right, #fff 95%, #cacaca 100%);
+				background-image:-o-linear-gradient(right, #fff 95%, #cacaca 100%);
+				background-image:linear-gradient(right, #fff 95%, #cacaca 100%);
+			}
+			
+			.sj-book .zoom-this:hover{
+				opacity:0.9;
+				cursor:pointer;
+			}
+			
+			/*自己写的*/
+			.pg2>div>div{
+				background-color: orange;
+				margin-left: 50px;
+				margin-right: 50px;
+				height: 200px;
+			}
+			img{
+				width: 100%;
+			}
+			.pg2>div{
+				width: 100%;
+				height: 100%;
+				background-color: #999999;
+				border: 1px solid #CACACA;
+			}
+			.cie{
+				background-color: red;
+				width: 30px;
+				height: 30px;
+				border-radius: 30px;
+				transition: 0.5s;
+				-webkit-transition: 0.5s;
+				-moz-transition: 0.5s;
+				position: fixed;
+				top: 0;
+				left: 0;
+			}
+			.cie.action{
+				width: 300px;
+				height: 300px;
+				border-radius: 10px;
+				top: 50%;
+				left: 50%;
+				margin-top: -150px;
+				margin-left: -150px;
+			}
+			.c-k{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 111111;
+			}
+			.c-k.action{
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="c-k" id="kks">
+			<div class="cie"></div>
+		</div>
+		<div class="book-k">
+			<div id="flipbook" class="sj-book">
+				<div class="pg1 hard">
+					<img src="img/t1.png"/>
+				</div>
+				<div class="pg2 hard">
+					<div>
+						<h1>菩提趣味</h1>
+						<div class="ani-con"></div>
+					</div>
+				</div>
+				<div class="pg2">Page 2</div>
+				<div class="pg3">Page 3</div>
+				<div class="pg3">Page 3</div>
+				<div class="pg4">Page 4</div>
+				<div class="pg4">Page 4</div>
+				<div class="pg5">Page 5</div>
+				<div class="pg5">Page 5</div>
+			</div>
+		</div>
+		<div class="book-fm">
+			
+		</div>
+		<script type="text/javascript">
+			$(document).on('click',".ani-con",function(){
+				$(".cie").toggleClass('action')
+				$(".c-k").toggleClass('action');
+				$.ajax({
+					type:"get",
+					url:"src/p1-1.html",
+					async:false,
+					success:function(data){
+						$(".cie").append(data);
+					}
+				});
+			})
+			$(".c-k").click(function(e){
+				var x = e.originalEvent.target.id
+				if(x === 'kks'){
+					$(".cie").toggleClass('action')
+					$(".c-k").toggleClass('action');
+					$(".cie>div").remove();
+				}
+			})
+			var width = $('body').width();
+			var height = $('body').height();
+			var flipbook = $("#flipbook")
+			flipbook.turn({
+					
+			
+					// Magazine width
+		
+					width: width-100,
+		
+					// Magazine height
+		
+					height: height-100,
+		
+					// Duration in millisecond
+		
+					duration: 1000,
+		
+					// Enables gradients
+		
+					gradients: true,
+					
+					// Auto center this flipbook
+		
+					autoCenter: true,
+		
+					// Elevation from the edge of the flipbook when turning a page
+		
+					elevation: 50
+					
+					// The number of pages
+		
+		
+			});
+		</script>
+	</body>
+</html>
