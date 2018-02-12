@@ -33,33 +33,12 @@ $(document).on('click',".navMenu",function(){
 	if(!predemo.hasClass(href)){
 		if(href === 'pg1'){
 			NextPage(predemo,nextdemo,36);
-		}else if(href === 'pg2'){
-			if(predemo.hasClass('menu2')){
-				$(".menu2 .ks3").remove();
-				$(".menu2 .ks4").remove();
-				setTimeout(function(){
-					$(".menu2 .ks").remove();
-				},500)
-				menu2x = 1;
-			}else if(predemo.hasClass('menu4')){
-				$('.xjs').remove();
-				$('.qjsj').remove();
-				menu3x = 1;
-			}else if(predemo.hasClass('menu3')){
-				$(".vid-kk").children('video')[0].pause();
-			}
-			NextPage(predemo,nextdemo,2);
 		}else{
 			if(href === 'pg4'){
 				if($(".center-right .vr").children('iframe').attr('src')==''){
 					$(".center-right .vr").children('iframe').attr('src','https://vr.ejudata.com/static/play.html?projectId=59c0888c05f6bc00107c6045&from=singlemessage&isappinstalled=0')
 					$(".center-right .vr").fadeIn(500);
 				}
-			}else if(href === 'pg3'){
-				$(".menu2").append(menu2Text);
-				setTimeout(function(){
-					$(".ks1 .dosc").addClass('action');
-				},500)
 			}else if(href === 'pg6'){
 				if($(".dud").children('iframe').attr('src') == ''){
 					$(".dud").children('iframe').attr('src','src/menu5-2.html');
@@ -87,36 +66,6 @@ $(document).on('click',".navMenu",function(){
 			}
 			NextPage(predemo,nextdemo,1);
 		}
-	}
-})
-$(".menu2").click(function(){
-	if(menu2x == 1){
-		$(".menu2 .ks1").fadeOut(500);
-		setTimeout(function(){
-			for (var jt=1;jt<10;jt++) {
-				(function(x){
-		   			setTimeout(function(){
-						$('.jt').eq(x-1).fadeIn(500)
-						console.log(x);
-					},((x-1)*700));
-		   		})(jt)
-			}
-		},500)
-		menu2x = 2;
-	}else if(menu2x == 2){
-		$(".menu2 .ks2").fadeOut(500);
-		$(".menu2 .ks3 .ggif").css("display",'block')
-		menu2x = 3;
-	}else if(menu2x == 3){
-		$(".menu2 .ks3").fadeOut(500);
-		$(".menu2 .ks4 .ggif").css("display",'block');
-		menu2x = 4;
-	}else{
-		$(".menu2 .ks1").fadeIn(500);
-		$(".menu2 .ks2").fadeIn(500);
-		$(".menu2 .ks3").fadeIn(500);
-		$(".menu2 .ks4").fadeIn(500);
-		menu2x = 1;
 	}
 })
 $(".mes").click(function(){
@@ -159,9 +108,13 @@ $(".ptcp").click(function(){
 	NextPage(predemo,nextdemo,21);
 })
 $(".ptcpRe").click(function(){
-	var href = $(this).attr('data-url');
+    var href = $(this).attr('data-url');
+    var ifreams = $(this).attr('data-next');
 	var nextdemo = $('.'+href);
-	var predemo = $(".pt-page-current");
+    var predemo = $(".pt-page-current");
+    if(ifreams!="" && nextdemo.children("iframe").attr("src")==""){
+        nextdemo.children("iframe").attr("src",ifreams)
+    }
 	NextPage(predemo,nextdemo,21);
 })
 $(".mess").click(function(){

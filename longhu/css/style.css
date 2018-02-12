@@ -443,16 +443,16 @@ canvas{
 }
 .ks.kss .menu-k{
 	position: absolute;
-	width: 25%;
-	height: 49%;
-	right: 5%;
-	left: auto;
-	top: 23%;
+	width: 60%;
+	height: 20%;
+	left: 20%;
+	bottom: 10%;
 	z-index: 11111;
+	top:auto;
 }
 .ks.kss .menu-k>div.navMenu{
-	width: 50%;
-	height: 50%;
+	width: 25%;
+	height: 100%;
 }
 .pg2.ani-action .ks.kss .tex1,.pg2.ani-action .ks.kss .tex2,.pg2.ani-action .ks.kss .tex3{
  	opacity: 1;
@@ -672,7 +672,7 @@ iframe{
 	top: 0;
 	left: 0;
 }
-.menu3 .return,.menu5 .return{
+.menu3 .return,.menu5 .return,.menu2 .return{
 	height: 10%!important;
 	width: 10%!important;
 }
@@ -788,13 +788,25 @@ video{
 .pg7,.pg8{
 	background-color: white;
 }
+.menu2-m{
+	position: absolute;
+    top: 25%;
+    left: 22%;
+    width: 56%;
+    height: 40%;
+}
+.menu2-m div{
+	height: 100%;
+	float: left;
+	width: 50%;
+}
 /*生活*/
 .menu4 .mek{
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
-.mek img{
+.mek img,.menu2-k img{
 	position: absolute;
 	width: 100%;
 	height: 100%;

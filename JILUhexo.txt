@@ -133,7 +133,7 @@ list_categories(post.categories, {
 hexo有些主题是需要自己新建标签页和分类页，来显示标签合集和分类合集。
 新建方法：
 1、在主题的source文件下，新建一个tags文件夹
-2、在该文件夹内新建一个tags.md文件
+2、在该文件夹内新建一个index.md文件
 3、在文件中添加如下内容：
 title: 标签集
 date: 2014-12-22 
@@ -141,11 +141,15 @@ type: "tags"
 comments: false //这是屏蔽评论功能的
 同样的新建分类页：
 1、在主题的source文件下，新建一个categories文件夹
-2、在该文件夹内新建一个categories.md文件
+2、在该文件夹内新建一个index.md文件
 3、在文件中添加如下内容：
 title: 标签集
 date: 2014-12-22 
 type: "categories"
+也可以使用HEXO的dos命令：
+hexo new page tags
+hexo new page categories
+这两个命令也是在source文件夹中新建tags和categories文件夹，并在文件夹内新建一个index.md文件
 
 PHP搭建博客
 使用wordpress
