@@ -115,6 +115,16 @@ $(".ptcpRe").click(function(){
     if(ifreams!="" && nextdemo.children("iframe").attr("src")==""){
         nextdemo.children("iframe").attr("src",ifreams)
     }
+    if(href === 'pg14'){
+        let vSrc = nextdemo.children("video").attr("src");
+        if(vSrc === ""){
+            nextdemo.children("video").attr("src","css/szyh.mp4");
+        }
+        nextdemo.children("video")[0].play();
+    }
+    if($(this).hasClass("videosk")){
+        $(this).prevAll("video")[0].pause();
+    }
 	NextPage(predemo,nextdemo,21);
 })
 $(".mess").click(function(){
