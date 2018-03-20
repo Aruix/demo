@@ -370,3 +370,46 @@ css3动态四则运算属性 calc()
 1、不要直接定义在子级上，把共性的声明放在父类
 2、结构和皮肤分离
 3、容器和内容分离
+
+video标签加上下面三个属性，就可以在微信中小窗播放：
+x5-playsinline="" 
+playsinline="" 
+webkit-playsinline=""
+
+实现图片懒加载
+<img class="limg" src="img/loading.gif" alt="测试" data-original="img/index_icon.jpg">
+//最开始的src中的链接是加载图，data-original中是图片的真实地址。
+var aImages = document.querySelectorAll('.limg');
+loadImg(aImages);
+window.onscroll = function() {
+  loadImg(aImages);
+};
+function loadImg(arr) {
+  for(var i = 0, len = arr.length; i < len; i++) {
+    if(arr[i].getBoundingClientRect().top < document.documentElement.clientHeight && !arr[i].isLoad) {
+      arr[i].isLoad = true;
+      arr[i].style.cssText = "transition: ''; opacity: 0;"
+      if(arr[i].dataset) {
+        aftLoadImg(arr[i], arr[i].dataset.original);
+      } else {
+        aftLoadImg(arr[i], arr[i].getAttribute("data-original"));
+      }
+      /*
+      (function(i) {
+        setTimeout(function() {
+          arr[i].style.cssText = "transition: 1s; opacity: 1;"
+          arr[i].classList = 'qqq';
+        }, 16)
+      })(i);*/
+    }
+  }
+}
+function aftLoadImg(obj, url) {
+  var oImg = new Image();
+  oImg.src = url;
+  oImg.onload = function() {
+    obj.src = oImg.src;
+    obj.style.cssText = "transition: 1s; opacity: 1;"
+    obj.classList = 'qqq';
+  }
+}

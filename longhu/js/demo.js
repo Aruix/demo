@@ -26,6 +26,10 @@ function NextPage(predemo,nextdemo,anim){
 		pre = predemo,
 		outClass = '', 
 		inClass = ''
+	pre.css({"will-change":"auto"});
+	pre.find("img").css({"will-change":"auto"});
+	next.css({"will-change":"transform"});
+	next.find("img").css({"will-change":"transform"});
 	switch (anim){
 		case 1:
 			outClass = 'pt-page-moveToLeft';

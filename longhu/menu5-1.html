@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css"/>
-		<script src="../js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<script src="js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			html,body,.zid{
 				width: 100%;
@@ -15,10 +15,10 @@
 			}
 			/*轮播图图标*/
 			.swiper-button-prev{
-				background-image: url(../img/x-left.png)!important;
+				background-image: url(img/x-left.png)!important;
 			}
 			.swiper-button-next{
-				background-image: url(../img/x-right.png)!important;
+				background-image: url(img/x-right.png)!important;
 			}
 			.swiper-pagination-bullet.swiper-pagination-bullet-active{
 				opacity: 0.6!important;
@@ -48,73 +48,73 @@
 		<title></title>
 	</head>
 	<body>
-		<!-- <img class="logos" src="../img/left-LOGO.png"/> -->
-		<!-- <img class="logos" src="../img/right-LOGO.png"/> -->
+		<!-- <img class="logos" src="img/left-LOGO.png"/> -->
+		<!-- <img class="logos" src="img/right-LOGO.png"/> -->
 		<div class="zid crs ps swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide sw1">
-					<img src="../img/bgbgs.png"/>
-					<img src="../img/khps-new-title.png" alt="" srcset="">
-					<img src="../img/khps-new-1.png" alt="">
-					<img src="../img/khps-new-2.png" alt="">
-					<img src="../img/khps-new-3.png" alt="">
-					<img src="../img/khps-new-4.png" alt="">
-					<img src="../img/khps-new-5.png" alt="">
-					<img src="../img/khps-new-6.png" alt="">
-					<img src="../img/khps-new-7.png" alt="">
+					<img src="img/bgbgs.png"/>
+					<img src="img/khps-new-title.png" alt="" srcset="">
+					<img src="img/khps-new-1.png" alt="">
+					<img src="img/khps-new-2.png" alt="">
+					<img src="img/khps-new-3.png" alt="">
+					<img src="img/khps-new-4.png" alt="">
+					<img src="img/khps-new-5.png" alt="">
+					<img src="img/khps-new-6.png" alt="">
+					<img src="img/khps-new-7.png" alt="">
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/yztbg.png"/>
-					<img src="../img/276-1.png" alt="">
-					<img src="../img/276-2.png" alt="">
+					<img src="img/yztbg.png"/>
+					<img src="img/276-1.png" alt="">
+					<img src="img/276-2.png" alt="">
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhaipingshu1.png"/>
+					<img src="img/kanhaipingshu1.png"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_9.jpg"/>
+					<img src="img/kanhai_9.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_1.jpg"/>
+					<img src="img/kanhai_1.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_2.jpg"/>
+					<img src="img/kanhai_2.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_3.jpg"/>
+					<img src="img/kanhai_3.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_4.jpg"/>
+					<img src="img/kanhai_4.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_5.jpg"/>
+					<img src="img/kanhai_5.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_6.jpg"/>
+					<img src="img/kanhai_6.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_7.jpg"/>
+					<img src="img/kanhai_7.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_8.jpg"/>
+					<img src="img/kanhai_8.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_10.jpg"/>
+					<img src="img/kanhai_10.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_11.jpg"/>
+					<img src="img/kanhai_11.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_12.jpg"/>
+					<img src="img/kanhai_12.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_13.jpg"/>
+					<img src="img/kanhai_13.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_14.jpg"/>
+					<img src="img/kanhai_14.jpg"/>
 				</div>
 				<div class="swiper-slide sw1">
-					<img src="../img/kanhai_15.jpg"/>
+					<img src="img/kanhai_15.jpg"/>
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
@@ -122,6 +122,12 @@
 		    <div class="swiper-button-next"></div>
 		</div>
 		<script type="text/javascript">
+			var width = $("body").width();
+			var height = $("body").height();
+			$(".zid").css({
+				"width":width+"px",
+				"height":height+"px",
+			})
 			//实景图
 			var mySwiper1 = new Swiper ('.zid', {
 			    loop: false,

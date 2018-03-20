@@ -6,6 +6,15 @@ html,body{
 	overflow: hidden;
 	background-color: #333333;
 }
+.icos,.icoN{
+	display: none;
+}
+.dsb{
+	display: block!important;
+}
+.xbg{
+	background: url("../img/pg3-1-bg.jpg") 100% 100%;
+}
 /*加载图*/
 #loading{
     width: 100%;
@@ -82,7 +91,18 @@ html,body{
 	z-index: 11;
 	cursor: pointer;
 }
-.vid-kk,.qpsc,.mek,.navMenu,.menu2,.mes,.mess{
+.headmenu{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 111;
+	top: 0;
+	left: 0;
+}
+.vid-kk,.qpsc,.mek,.navMenu,/*.menu2,*/.mes,.mess,.header{
+	cursor: pointer;
+}
+.header *,.navMenu *{
 	cursor: pointer;
 }
 .sett{
@@ -570,7 +590,7 @@ canvas{
 .ptqw.ani-action .ks .ks2 .jiantou4{
 	opacity: 1;
 }
-.ptqw.ani-action .ks .ks2 .huxi{
+.ks .ks1 .huxi{
 	animation: huxi 3s infinite;
 }
 .ptqw.ani-action .jiantou1,.ptqw.ani-action .jiantou2,.ptqw.ani-action .jiantou3/*,.ptqw.ani-action .ks1 .opacity0-1*/{
@@ -580,10 +600,9 @@ canvas{
 	display: none;
 }
 iframe{
-	transition: all 0.6s 0.1s;
-	-moz-transition: all 0.6s 0.1s; /* Firefox 4 */
-	-webkit-transition: all 0.6s 0.1s; /* Safari 和 Chrome */
-	-o-transition: all 0.6s 0.1s; /* Opera */
+	display: block;
+	width: 100%;
+	height: 100%;
 	background-color: white;
 }
 .ptqw.ani-action .jiantou4{
@@ -844,35 +863,42 @@ video{
 	top: 0;
 	left: 0;
 }
+.transition-css{
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
 /*新加*/
-.pg6 .texx1,.pg6 .texx2,.pg6 .texx3,.pg5 .texx2,.pg5 .texx3{
+.texx1,.texx2,.texx3{
 	transition: all 0.6s 0.5s;
 	-moz-transition: all 0.6s 0.5s; /* Firefox 4 */
 	-webkit-transition: all 0.6s 0.5s; /* Safari 和 Chrome */
 	-o-transition: all 0.6s 0.5s; /* Opera */
 }
-.pg6 .texx1{
+.texx1{
 	opacity: 0;
 	transform: translate(-10%,0);
 	-moz-transform: translate(-10%,0);
 	-webkit-transform: translate(-10%,0);
 	-moz-transform: translate(-10%,0);
 }
-.pg6 .texx3,.pg5 .texx3{
+.texx3{
 	opacity: 0;
 	transform: translate(10%,0);
 	-moz-transform: translate(10%,0);
 	-webkit-transform: translate(10%,0);
 	-moz-transform: translate(10%,0);
 }
-.pg6 .texx2,.pg5 .texx2{
+.texx2{
 	opacity: 0;
 	transform: translate(-10%,0);
 	-moz-transform: translate(-10%,0);
 	-webkit-transform: translate(-10%,0);
 	-moz-transform: translate(-10%,0);
 }
-.pg6.ani-action .texx1,.pg6.ani-action .texx2,.pg6.ani-action .texx3,.pg5.ani-action .texx2,.pg5.ani-action .texx3{
+
+.ani-action .texx1,.ani-action .texx2,.ani-action .texx3{
 	opacity: 1;
 	transform: translate(0,0);
 	-moz-transform: translate(0,0);

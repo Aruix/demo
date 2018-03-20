@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<title>Document</title>
+	<style>
+	</style>
+</head>
+<body>
+	<div class="menu2 ptqw">
+		<div class="ks">
+		</div>
+	</div>
+	<script>
+		var ks3 = '<div class="ks3"><img src="img/pg1-bg1-icon1.png"/><img src="img/pg1-bg1-icon2.png"/><img class="ggif" src="img/3z1h.gif"/></div>'
+		var ks4 = '<div class="ks4"><img src="img/pg1-bg1-icon1.png"/><img src="img/pg1-bg1-icon2.png"/><img class="ggif" src="img/5jiaotong.gif"/></div>'
+		var menu2x = 2;
+		$(".menu2 .ks3").remove();
+		$(".menu2 .ks4").remove();
+		$(".ks").append(ks3);
+		$(".menu2").click(function(){
+			if(menu2x == 1){
+				$(".menu2 .ks3").remove();
+				$(".menu2 .ks4").remove();
+				$(".ks").append(ks3);
+				menu2x = 2;
+			}else{
+				$(".menu2 .ks3").remove();
+				$(".menu2 .ks4").remove();
+				$(".ks").append(ks4);
+				menu2x = 1;
+			}
+		})
+
+	</script>
+</body>
+</html>

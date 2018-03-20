@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.1.7.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<title>Document</title>
+	<style>
+		html,body{
+			background-color: rgba(0, 0, 0, 0)!important;
+		}
+		.menu2 .dosc{
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu2 ptqw">
+	<div class="ks">
+		<div class="ks1">
+			<!-- <img src="img/pg3-1-bg.jpg"/> -->
+			<img class="jiantou1 dosc" src="img/pg3-1-jian1.png" />
+			<img class="jiantou2 dosc" src="img/pg3-1-jian2.png" />
+			<img class="jiantou3 dosc" src="img/pg3-1-jian3.png" />
+			<img class="jiantou4 dosc" src="img/pg3-1-jian4.png" />
+			<img class="huxis dosc" src="img/pg3-1-huxi.png"/>
+			<img class="dosc" src="img/pg1-bg5-icon1.png"/>
+			<img class="dosc" src="img/pg1-bg5-icon2.png"/>
+			<img class="dosc" src="img/pg1-bg5-icon3.png"/>
+			<img class="dosc" src="img/pg1-bg5-icon4.png"/>
+		</div>
+	</div>
+</div>
+	<script>
+		var lists = document.querySelectorAll(".dosc").length+1;
+		for (var jt=1;jt<lists;jt++) {
+			(function(x){
+				setTimeout(function(){
+					if($('.dosc').eq(x-1).hasClass("huxis")){
+						$('.dosc').eq(x-1).addClass("huxi");
+					}
+					$('.dosc').eq(x-1).css('opacity',1)
+				},((x-1)*500));
+			})(jt)
+		}
+	</script>
+</body>
+</html>

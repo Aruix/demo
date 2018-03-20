@@ -6,7 +6,7 @@ window.onload = function(){
 		height:height
 	})
    	var a = $("#loading");
-    a.fadeOut(500).remove();
+	a.fadeOut(500).remove();
 }
 var menu2x = 1;
 var menu3x = 1;
@@ -18,9 +18,23 @@ var mySwiper = new Swiper ('.header', {
     fade: {
 	  crossFade: true,
 	},
+	onSlideChangeStart: function(swiper){
+		var index = swiper.activeIndex;
+		$(".header").find(".swiper-slide").eq(index)
+		.find("img").css({"will-change":"transform"});
+		$(".header").find(".swiper-slide").eq(index-1)
+		.find("img").css({"will-change":"auto"})
+	},
     autoplay: 5000
 })
-$(".header").click(function(){
+var touchs = "";
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    touchs = "touchend";
+} else {
+    touchs = "click"
+}
+
+$(".headmenu").on(touchs,function(){
 	var nextdemo = $('.pg2');
 	var predemo = $(this);
 	NextPage(predemo,nextdemo,36);
@@ -29,7 +43,11 @@ $(".header").click(function(){
 $(document).on('click',".navMenu",function(){
 	var href = $(this).attr('data-url');
 	var nextdemo = $('.'+href);
-	var predemo = $(".pt-page-current");
+    var predemo = $(".pt-page-current");
+    if($(this).attr("data-icon")){
+        $(".icos").removeClass("dsb");
+        $("."+$(this).attr("data-icon")+"a").addClass("dsb");
+    }
 	if(!predemo.hasClass(href)){
 		if(href === 'pg1'){
 			NextPage(predemo,nextdemo,36);
@@ -44,25 +62,7 @@ $(document).on('click',".navMenu",function(){
 					$(".dud").children('iframe').attr('src','src/menu5-2.html');
 				}
 			}else if(href === 'pg5'){
-				/*
-				$(".qjsj").remove();
-				$('.xjs').remove();
-				$(".mek").append('<img class="xjs" style="display:none" src="img/0a.png"/>')
-				for (var i=1;i<9;i++) {
-					if(i<10){
-						$(".mek").append('<img class="xjs" style="display:none" src="img/sh1-'+i+'.png"/>')
-					}else{
-						$(".mek").append('<img class="xjs" style="display:none" src="img/sh1-'+i+'.png"/>')
-					}
-				}
-				for (var y=1;y<10;y++) {
-					(function(x){
-			   			setTimeout(function(){
-							$('.xjs').eq(x-1).fadeIn(700)
-						},(x*900));
-			   		})(y)
-				}
-				menu3x = 2;*/
+				
 			}
 			NextPage(predemo,nextdemo,1);
 		}
@@ -72,7 +72,6 @@ $(".mes").click(function(){
 	var dataUrl = $(this).attr('data-url');
 	var dom = $('.'+dataUrl);
 	var index = $(this).index();
-	alert(index);
 	if(dataUrl="ps"){
 		if($(".ps").children('iframe').attr('src') == ''){
 			$(".ps").children('iframe').attr('src','src/menu5-1.html');
@@ -116,7 +115,7 @@ $(".ptcpRe").click(function(){
         nextdemo.children("iframe").attr("src",ifreams)
     }
     if(href === 'pg14'){
-        let vSrc = nextdemo.children("video").attr("src");
+        var vSrc = nextdemo.children("video").attr("src");
         if(vSrc === ""){
             nextdemo.children("video").attr("src","css/szyh.mp4");
         }
@@ -125,7 +124,20 @@ $(".ptcpRe").click(function(){
     if($(this).hasClass("videosk")){
         $(this).prevAll("video")[0].pause();
     }
-	NextPage(predemo,nextdemo,21);
+    if($(this).attr("data-icon")){
+        var par = $(this).parents('.menu2-k');
+        par.find(".icoN").removeClass("dsb")
+        //$(".icoN").removeClass("dsb");
+        par.find(".iccs").css("display","block");
+        // $(".iccs").css("display","block");
+        par.find("."+$(this).attr("data-icon")).css("display","none");
+        //$("."+$(this).attr("data-icon")).css("display","none");
+        par.find("."+$(this).attr("data-icon")+"a").addClass("dsb");
+        //$("."+$(this).attr("data-icon")+"a").addClass("dsb");
+	}
+	setTimeout(function(){
+		NextPage(predemo,nextdemo,21);
+	},600)
 })
 $(".mess").click(function(){
 	var dataUrl = $(this).attr('data-url');
@@ -156,51 +168,6 @@ $(".vid-kk").click(function(){
 })
 //全屏
 var qpx = 1;
-/*
-$(".qpsc").click(function(){
-	var fream = $(this).next('iframe');
-	var xxleft = parseFloat($(".buk").css('left'));
-	var xxtop = parseFloat($(".buk").css('top'));
-	var left = fream.offset().left-xxleft;
-	var top = fream.offset().top-xxtop;
-	var width = $("body").width();
-	var height = $("body").height();
-	var widthx = fream[0].offsetWidth;
-	var heightx = fream[0].offsetHeight;
-	if(qpx == 1){
-		$(this).css({
-			'position':'fixed',
-			'background-image':'url(img/return.png)',
-			'width':width*0.07,
-			'height':height*0.0537
-		})
-		fream.css({
-			'position':'fixed',
-			'transform':'translate('+(-left)+'px,'+(-top)+'px)',
-			'-webkit-transform':'translate('+(-left)+'px,'+(-top)+'px)',
-			'-moz-transform':'translate('+(-left)+'px,'+(-top)+'px)',
-			'-o-transform':'translate('+(-left)+'px,'+(-top)+'px)',
-			'width':width,
-			'height':height
-		})
-		qpx = 2;
-	}else{
-		$(this).css({
-			'position':'absolute',
-			'background-image':'url(img/Unknown-2.svg)'
-		})
-		fream.css({
-			'transform':'translate('+(0)+'px,'+(0)+'px)',
-			'-webkit-transform':'translate('+(0)+'px,'+(0)+'px)',
-			'-moz-transform':'translate('+(0)+'px,'+(0)+'px)',
-			'-o-transform':'translate('+(0)+'px,'+(0)+'px)',
-			'width':'100%',
-			'height':'100%',
-			'position':''
-		})
-		qpx = 1;
-	}
-})*/
 
 $(".qpsc").click(function(){
 	var fream = $(this).next('iframe');
@@ -332,218 +299,6 @@ particlesJS("particles-js", {
         },
         "line_linked": {
             "enable": false,
-            "distance": 200,
-            "color": "#fff",
-            "opacity": 0.1,
-            "width": 2
-        },
-        "move": {
-            "enable": true,
-            "speed": 3,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": false,
-                "mode": "repulse"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 800,
-                "line_linked": {
-                    "opacity": 1
-                }
-            },
-            "bubble": {
-                "distance": 800,
-                "size": 80,
-                "duration": 2,
-                "opacity": 0.8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 400,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            },
-            "remove": {
-                "particles_nb": 2
-            }
-        }
-    },
-    "retina_detect": false
-});
-//粒子效果
-particlesJS("particles-js1", {
-    "particles": {
-        "number": {
-            "value": 40,
-            "density": {
-                "enable": true,
-                "value_area": 900
-            }
-        },
-        "color": {
-            "value": "#fff"
-        },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#fff"
-            },
-            "polygon": {
-                "nb_sides": 2
-            }
-        },
-        "opacity": {
-            "value": 0.1,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 10,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 1,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 10,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 200,
-            "color": "#fff",
-            "opacity": 0.1,
-            "width": 2
-        },
-        "move": {
-            "enable": true,
-            "speed": 3,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": false,
-                "mode": "repulse"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 800,
-                "line_linked": {
-                    "opacity": 1
-                }
-            },
-            "bubble": {
-                "distance": 800,
-                "size": 80,
-                "duration": 2,
-                "opacity": 0.8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 400,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            },
-            "remove": {
-                "particles_nb": 2
-            }
-        }
-    },
-    "retina_detect": false
-});
-//粒子效果
-particlesJS("particles-js2", {
-    "particles": {
-        "number": {
-            "value": 40,
-            "density": {
-                "enable": true,
-                "value_area": 900
-            }
-        },
-        "color": {
-            "value": "#fff"
-        },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#fff"
-            },
-            "polygon": {
-                "nb_sides": 2
-            }
-        },
-        "opacity": {
-            "value": 0.1,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 10,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 1,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 10,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
             "distance": 200,
             "color": "#fff",
             "opacity": 0.1,
