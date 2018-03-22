@@ -413,3 +413,6 @@ function aftLoadImg(obj, url) {
     obj.classList = 'qqq';
   }
 }
+
+点击弹出菜单，然后点击其他区域，菜单消失：
+方法，跳出菜单时，在其下面，写一个透明的层，点击透明层，菜单消失。
