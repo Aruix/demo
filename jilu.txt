@@ -375,6 +375,9 @@ video标签加上下面三个属性，就可以在微信中小窗播放：
 x5-playsinline="" 
 playsinline="" 
 webkit-playsinline=""
+但是在安卓端，视频滚动的时候会悬浮在最上层。
+使用同层接入的方法，整个视口会随着视频的滚动发生变化。
+所以，若视频固定不滚动，可以使用任意方法，若视频滚动，只能在新的视图层中播放。
 
 实现图片懒加载
 <img class="limg" src="img/loading.gif" alt="测试" data-original="img/index_icon.jpg">
@@ -416,3 +419,58 @@ function aftLoadImg(obj, url) {
 
 点击弹出菜单，然后点击其他区域，菜单消失：
 方法，跳出菜单时，在其下面，写一个透明的层，点击透明层，菜单消失。
+
+echarts使用：
+条形图：
+要想每个条形的颜色不同，需要在series.data中设置
+option = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+      type: 'bar',
+      data: [
+        {
+          name:"Mon",
+          value:100,
+          itemStyle:{
+            color:"#f1f1f1"
+          }
+        },
+        {
+          name:"Mon",
+          value:100,
+          itemStyle:{
+            color:"#000"
+          }
+        }
+      ]
+    }]
+};
+下面是data的普通配置
+option = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'bar'
+    }]
+};
+在条形图中，设置color或者itemStyle中的color都没有效果，必须设置series.data中的itemStyle.color才可以。
+而在饼状图中，则可以直接设置color或者itemStyle中的color属性。
+
+color的取值：
+1、颜色码
+2、图片
+3、渐变
+链接：
+http://echarts.baidu.com/option.html#series-pie.itemStyle.color
